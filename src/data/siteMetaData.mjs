@@ -1,0 +1,16 @@
+export const siteMetadata = {
+  title: "Portfolio",
+  author: "Anthony Douglas",
+  description: "Software Engineer",
+  language: "en-us",
+  theme: "light",
+  siteName: "anthonydouglas.me",
+  siteUrl: "https://anthonydouglas.me",
+  siteRepo: "https://github.com/BUMBAIYA/anthonydouglas.me",
+  siteLogo: "/favicon.ico",
+  image: "/static/homepage.png",
+  email: "anthonydouglas88111@gmail.com",
+  github: "https://github.com/anthonydouglas88111",
+  locale: "en-US",
+  googleSiteVerification: "_YJlO90eSoye2AQOhbkRAzNbejzCGiTgAD4RNR3NtHc",
+};
