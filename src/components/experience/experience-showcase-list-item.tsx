@@ -77,10 +77,9 @@ export default function ExperienceShowcaseListItem(
         <span className="text-sm font-medium text-foreground xs:text-base">
           {props.date} | {props.location}
         </span>
-        <div dangerouslySetInnerHTML={{ __html: props.description }} className="text-sm font-medium text-muted-foreground xs:text-base" />
-        {/* <p className="text-sm font-medium text-muted-foreground xs:text-base">
+        <p className="text-sm font-medium text-muted-foreground xs:text-base">
           {props.description}
-        </p> */}
+        </p>
       </motion.div>
     </li>
   );
