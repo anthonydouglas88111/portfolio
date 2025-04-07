@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-zinc-200 pt-8 dark:border-zinc-800 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="text-base text-zinc-600 dark:text-zinc-400">
-              © {currentYear} Anthony Douglas. All rights reserved.
+              © {currentYear} {siteMetadata.author}. All rights reserved.
             </span>
           </div>
           <div className="flex gap-6">

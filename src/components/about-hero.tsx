@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
 import profileImg from "@/public/assets/images/profile.png";
+import { siteMetadata } from "@/data/siteMetaData.mjs";
 import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {
@@ -31,7 +32,7 @@ export default function AboutHero() {
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
             <h1 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
-              Hi, I&apos;m Anthony Douglas
+              Hi, I&apos;m {siteMetadata.author}
             </h1>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>

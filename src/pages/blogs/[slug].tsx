@@ -31,7 +31,7 @@ export default function BlogPost() {
   return (
     <>
       <NextSeo
-        title={`${post.title} - Anthony Douglas Blogs`}
+        title={`${post.title} - ${siteMetadata.author} Blogs`}
         description={post.description}
         canonical={`${siteMetadata.siteUrl}/blogs/${post.slug}`}
         openGraph={{
@@ -48,7 +48,7 @@ export default function BlogPost() {
             : [
                 {
                   url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-                  alt: "Anthony Douglas - Portfolio Image",
+                  alt: `${siteMetadata.author} - Portfolio Image`,
                 },
               ],
           siteName: siteMetadata.siteName,
@@ -152,9 +152,9 @@ export default function BlogPost() {
               About the Author
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Anthony Douglas is a Software Engineer passionate about building
-              scalable web applications and sharing knowledge with the developer
-              community.
+              {siteMetadata.author} is a Software Engineer passionate about
+              building scalable web applications and sharing knowledge with the
+              developer community.
             </p>
             <div className="mt-4 flex gap-4">
               <a

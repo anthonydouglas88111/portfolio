@@ -33,18 +33,18 @@ export default function Blogs() {
   return (
     <>
       <NextSeo
-        title="Blogs by Anthony Douglas - Software Engineer Portfolio"
-        description="Read insights, tutorials, and thoughts on software development, web technologies, and engineering best practices from Anthony Douglas."
+        title={`Blogs by ${siteMetadata.author} | Software Engineer`}
+        description={`Read insights, tutorials, and thoughts on software development, web technologies, and engineering best practices from ${siteMetadata.author}.`}
         canonical={`${siteMetadata.siteUrl}/blogs`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/blogs`,
-          title: "Blogs by Anthony Douglas - Software Engineer",
+          title: `Blogs by ${siteMetadata.author} - Software Engineer`,
           description:
             "Explore articles and insights about software development, web technologies, and engineering best practices.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: "Anthony Douglas - Portfolio Image",
+              alt: `${siteMetadata.author} - Portfolio Image`,
             },
           ],
           siteName: siteMetadata.siteName,

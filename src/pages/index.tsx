@@ -11,18 +11,18 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Anthony Douglas | Software Engineer"
-        description="Explore the professional portfolio of Anthony Douglas, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
+        title={`${siteMetadata.author} | Software Engineer`}
+        description={`Explore the professional portfolio of ${siteMetadata.author}, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences.`}
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Anthony Douglas - Software Engineer",
+          title: `${siteMetadata.author} | Software Engineer`,
           description:
-            "Dive into the world of web development with Anthony Douglas. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+            `Dive into the world of web development with ${siteMetadata.author}. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: "Anthony Douglas - Portfolio Image",
+              alt: `${siteMetadata.author} - Portfolio Image`,
             },
           ],
           siteName: siteMetadata.siteName,
