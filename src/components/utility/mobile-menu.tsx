@@ -27,6 +27,13 @@ export default function MobileMenu({
     router.push(href);
   };
 
+  const isActive = (href: string) => {
+    if (href === "/blogs") {
+      return pathName === href || pathName.startsWith(`${href}/`);
+    }
+    return pathName === href;
+  };
+
   return (
     <Transition show={openMenu} as={Fragment}>
       <Dialog as="div" className="z-50" onClose={setOpenMenu}>
@@ -50,7 +57,7 @@ export default function MobileMenu({
                   >
                     <span
                       className={classNames(
-                        pathName === link.href ? "w-full" : "w-0",
+                        isActive(link.href) ? "w-full" : "w-0",
                         "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
                       )}
                     ></span>

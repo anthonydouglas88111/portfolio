@@ -30,6 +30,13 @@ export default function Navbar(props: NavbarProps) {
     setIsModalOpen((prev) => !prev);
   };
 
+  const isActive = (href: string) => {
+    if (href === "/blogs") {
+      return pathName === href || pathName.startsWith(`${href}/`);
+    }
+    return pathName === href;
+  };
+
   return (
     <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
@@ -53,13 +60,13 @@ export default function Navbar(props: NavbarProps) {
                   <Link
                     href={_link.href}
                     className={classNames(
-                      pathName === _link.href
+                      isActive(_link.href)
                         ? "font-semibold text-background dark:hover:text-foreground"
                         : "text-foreground",
                       "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
                     )}
                   >
-                    {_link.href === pathName && (
+                    {isActive(_link.href) && (
                       <motion.span
                         layoutId="tab-pill"
                         animate={{
