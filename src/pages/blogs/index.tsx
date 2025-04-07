@@ -1,4 +1,5 @@
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 import { useState } from "react";
 
 import BlogCard from "@/components/blogs/blog-card";
@@ -112,13 +113,13 @@ export default function Blogs() {
             </span>
             <p className="mt-10 text-base md:text-xl">
               Follow me on{" "}
-              <a
+              <Link
                 href={siteMetadata.github}
                 target="_blank"
                 className="font-semibold text-accent underline underline-offset-2 hover:text-accent/70"
               >
                 Github
-              </a>{" "}
+              </Link>{" "}
               to get notified when new posts are published.
             </p>
           </div>

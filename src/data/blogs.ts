@@ -1,4 +1,4 @@
-import {type BlogCardProps} from "@/components/blogs/blog-card";
+import { type BlogCardProps } from "@/components/blogs/blog-card";
 
 export const BLOG_POSTS: BlogCardProps[] = [
   {
@@ -422,7 +422,8 @@ const numbers: number[] = [1, 2, 3];
   {
     id: "4",
     title: "Getting Started with React Hooks",
-    description: "A comprehensive guide to understanding and implementing React Hooks, from useState to custom hooks.",
+    description:
+      "A comprehensive guide to understanding and implementing React Hooks, from useState to custom hooks.",
     date: "2025-03-30",
     category: "React",
     readTime: "10 min read",
@@ -483,7 +484,8 @@ function useWindowSize() {
   {
     id: "5",
     title: "CSS Grid vs Flexbox: When to Use Each",
-    description: "A detailed comparison of CSS Grid and Flexbox, with practical examples of when to use each layout system.",
+    description:
+      "A detailed comparison of CSS Grid and Flexbox, with practical examples of when to use each layout system.",
     date: "2025-03-29",
     category: "CSS",
     readTime: "8 min read",
@@ -533,7 +535,8 @@ function useWindowSize() {
   {
     id: "6",
     title: "JavaScript Promises and Async/Await Explained",
-    description: "Master asynchronous JavaScript programming with Promises and Async/Await patterns.",
+    description:
+      "Master asynchronous JavaScript programming with Promises and Async/Await patterns.",
     date: "2025-03-28",
     category: "JavaScript",
     readTime: "12 min read",
@@ -594,7 +597,8 @@ async function handleData() {
   {
     id: "7",
     title: "Building RESTful APIs with Node.js and Express",
-    description: "Learn how to create robust RESTful APIs using Node.js and Express framework.",
+    description:
+      "Learn how to create robust RESTful APIs using Node.js and Express framework.",
     date: "2025-03-27",
     category: "Backend",
     readTime: "15 min read",
@@ -660,7 +664,8 @@ app.use((err, req, res, next) => {
   {
     id: "8",
     title: "Introduction to GraphQL",
-    description: "Understanding GraphQL fundamentals and how it differs from REST APIs.",
+    description:
+      "Understanding GraphQL fundamentals and how it differs from REST APIs.",
     date: "2025-03-26",
     category: "API",
     readTime: "10 min read",
@@ -729,7 +734,8 @@ query {
   {
     id: "9",
     title: "Docker for Developers",
-    description: "Learn how to containerize applications with Docker for consistent development and deployment.",
+    description:
+      "Learn how to containerize applications with Docker for consistent development and deployment.",
     date: "2025-03-25",
     category: "DevOps",
     readTime: "12 min read",
@@ -792,7 +798,8 @@ services:
   {
     id: "10",
     title: "Testing in React with Jest and React Testing Library",
-    description: "Comprehensive guide to testing React applications using Jest and React Testing Library.",
+    description:
+      "Comprehensive guide to testing React applications using Jest and React Testing Library.",
     date: "2025-03-24",
     category: "Testing",
     readTime: "14 min read",
@@ -847,7 +854,8 @@ test('loads and displays data', async () => {
   {
     id: "11",
     title: "State Management with Redux Toolkit",
-    description: "Modern approach to state management in React applications using Redux Toolkit.",
+    description:
+      "Modern approach to state management in React applications using Redux Toolkit.",
     date: "2025-03-23",
     category: "React",
     readTime: "11 min read",
@@ -916,7 +924,8 @@ const fetchUsers = createAsyncThunk(
   {
     id: "12",
     title: "Web Accessibility (A11y) Best Practices",
-    description: "Learn how to make your web applications accessible to all users, including those with disabilities.",
+    description:
+      "Learn how to make your web applications accessible to all users, including those with disabilities.",
     date: "2025-03-22",
     category: "Accessibility",
     readTime: "13 min read",
@@ -968,7 +977,8 @@ const fetchUsers = createAsyncThunk(
   {
     id: "13",
     title: "Building Progressive Web Apps (PWAs)",
-    description: "Learn how to create Progressive Web Apps that provide a native app-like experience.",
+    description:
+      "Learn how to create Progressive Web Apps that provide a native app-like experience.",
     date: "2025-03-21",
     category: "Web Development",
     readTime: "15 min read",
@@ -1032,7 +1042,8 @@ if ('serviceWorker' in navigator) {
   {
     id: "14",
     title: "CSS-in-JS: Styled Components and Emotion",
-    description: "Explore modern CSS-in-JS solutions for styling React applications.",
+    description:
+      "Explore modern CSS-in-JS solutions for styling React applications.",
     date: "2025-03-20",
     category: "CSS",
     readTime: "10 min read",
@@ -1118,7 +1129,8 @@ function App() {
   {
     id: "15",
     title: "GraphQL with Apollo Client in React",
-    description: "Learn how to integrate GraphQL into your React applications using Apollo Client.",
+    description:
+      "Learn how to integrate GraphQL into your React applications using Apollo Client.",
     date: "2025-03-19",
     category: "GraphQL",
     readTime: "12 min read",
@@ -1220,7 +1232,8 @@ function AddUserForm() {
   {
     id: "16",
     title: "Microservices Architecture with Node.js",
-    description: "Learn how to design and implement microservices using Node.js and related technologies.",
+    description:
+      "Learn how to design and implement microservices using Node.js and related technologies.",
     date: "2025-03-18",
     category: "Architecture",
     readTime: "14 min read",
@@ -1291,7 +1304,8 @@ app.listen(port, () => {
   {
     id: "17",
     title: "Web Security Best Practices",
-    description: "Essential security practices for web applications to protect against common vulnerabilities.",
+    description:
+      "Essential security practices for web applications to protect against common vulnerabilities.",
     date: "2025-03-17",
     category: "Security",
     readTime: "13 min read",
@@ -1354,7 +1368,8 @@ app.use((req, res, next) => {
   {
     id: "18",
     title: "Building Real-time Applications with Socket.io",
-    description: "Learn how to create real-time, bidirectional communication between web clients and servers using Socket.io.",
+    description:
+      "Learn how to create real-time, bidirectional communication between web clients and servers using Socket.io.",
     date: "2025-03-16",
     category: "Real-time",
     readTime: "11 min read",
@@ -1426,7 +1441,8 @@ socket.on('message', (msg) => {
   {
     id: "19",
     title: "Optimizing React Performance",
-    description: "Advanced techniques for improving the performance of React applications.",
+    description:
+      "Advanced techniques for improving the performance of React applications.",
     date: "2025-03-15",
     category: "React",
     readTime: "12 min read",
@@ -1494,7 +1510,8 @@ function App() {
   {
     id: "20",
     title: "TypeScript Advanced Types",
-    description: "Deep dive into advanced TypeScript types and type manipulation techniques.",
+    description:
+      "Deep dive into advanced TypeScript types and type manipulation techniques.",
     date: "2025-03-14",
     category: "TypeScript",
     readTime: "15 min read",
@@ -1568,7 +1585,8 @@ function processValue(value: unknown) {
   {
     id: "21",
     title: "Server-Side Rendering with Next.js",
-    description: "Comprehensive guide to implementing server-side rendering in Next.js applications.",
+    description:
+      "Comprehensive guide to implementing server-side rendering in Next.js applications.",
     date: "2025-03-13",
     category: "Next.js",
     readTime: "13 min read",
@@ -1643,7 +1661,8 @@ export async function getStaticProps({ params }) {
   {
     id: "22",
     title: "Building APIs with Express and TypeScript",
-    description: "Learn how to create robust APIs using Express.js and TypeScript.",
+    description:
+      "Learn how to create robust APIs using Express.js and TypeScript.",
     date: "2025-03-12",
     category: "Backend",
     readTime: "14 min read",
@@ -1744,7 +1763,8 @@ export const errorHandler = (
   {
     id: "23",
     title: "State Management with Zustand",
-    description: "Learn how to manage application state using Zustand, a simple and flexible state management solution.",
+    description:
+      "Learn how to manage application state using Zustand, a simple and flexible state management solution.",
     date: "2025-03-11",
     category: "State Management",
     readTime: "10 min read",
@@ -1804,5 +1824,5 @@ const useStore = create(
     `,
     image: "/assets/images/blogs/zustand-state.jpg",
     tags: ["Zustand", "State Management", "React", "JavaScript"],
-  }
+  },
 ];

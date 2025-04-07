@@ -21,13 +21,13 @@ export default function Footer() {
             className="text-center"
           >
             <span className="inline-block rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium uppercase tracking-wider text-white backdrop-blur-sm md:text-base">
-              Let's work together
+              Let&apos;s work together
             </span>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
               Have a project in mind?
             </h2>
             <p className="mt-4 max-w-2xl text-base text-white/80 sm:text-lg">
-              I'm always open to discussing new projects, creative ideas or
+              I&apos;m always open to discussing new projects, creative ideas or
               opportunities to be part of your visions.
             </p>
           </motion.div>
@@ -39,7 +39,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col items-center gap-6 sm:flex-row sm:gap-8"
           >
-            <a
+            <Link
               href={`mailto:${siteMetadata.email}`}
               className="group flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20"
               onMouseEnter={() => {}}
@@ -47,7 +47,7 @@ export default function Footer() {
             >
               <MailIcon className="h-5 w-5" />
               <span>{siteMetadata.email}</span>
-            </a>
+            </Link>
             <ContactButton />
           </motion.div>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -98,15 +99,15 @@ export default function LandingHero() {
             </FadeUp>
             <FadeUp key="cta-buttons" duration={0.6} delay={0.4}>
               <div className="pointer-events-auto mt-8 flex flex-wrap gap-4">
-                <a
+                <Link
                   href="/assets/resume.pdf"
                   download
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-semibold text-white transition-all hover:scale-105 hover:bg-accent/90"
                 >
                   <FiDownload className="h-5 w-5" />
                   Download Resume
-                </a>
-                <a
+                </Link>
+                <Link
                   href={siteMetadata.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -114,7 +115,7 @@ export default function LandingHero() {
                 >
                   <FiGithub className="h-5 w-5" />
                   GitHub
-                </a>
+                </Link>
               </div>
             </FadeUp>
           </AnimatePresence>

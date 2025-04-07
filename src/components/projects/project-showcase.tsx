@@ -125,7 +125,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                       </div>
                       <div className="mt-auto flex items-center justify-end gap-4">
                         {project.sourceCodeHref && (
-                          <a
+                          <Link
                             href={project.sourceCodeHref}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -133,7 +133,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                           >
                             <span>Source Code</span>
                             <GithubIcon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-                          </a>
+                          </Link>
                         )}
                         <Link
                           href={project.liveWebsiteHref}

@@ -55,7 +55,7 @@ export default function ExperienceShowcaseListItem(
 ) {
   const ref = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <li ref={ref} className="mx-auto mb-14 flex w-[60%] flex-col gap-1">
       <ShowCaseLiIcon iconRef={ref} />

@@ -38,4 +38,4 @@ export default function ScrollUpButton() {
       <ArrowUpIcon className="h-6 w-6" />
     </button>
   );
-} 
+}

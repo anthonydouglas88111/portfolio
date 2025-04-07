@@ -1,4 +1,5 @@
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 import ProjectCard from "@/components/projects/project-card";
 import { PROJECTS_CARD } from "@/data/projects";
@@ -57,13 +58,13 @@ export default function Projects() {
             </span>
             <p className="mt-10 text-base md:text-xl">
               Visit my github to see some of the latest projects{" "}
-              <a
+              <Link
                 href={`${siteMetadata.github}?tab=repositories`}
                 target="_blank"
                 className="font-semibold text-accent underline underline-offset-2 hover:text-accent/70"
               >
                 Github
-              </a>
+              </Link>
             </p>
           </div>
         </div>
