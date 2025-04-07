@@ -96,7 +96,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                       />
                       {images[index].DARK && (
                         <Image
-                          src={images[index].DARK}
+                          src={images[index].DARK!}
                           alt={project.title}
                           fill
                           className="hidden object-cover dark:block"
