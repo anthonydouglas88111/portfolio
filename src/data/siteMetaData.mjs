@@ -12,4 +12,7 @@ export const siteMetadata = {
   email: "anthonydouglas88111@gmail.com",
   github: "https://github.com/anthonydouglas88111",
   locale: "en-US",
+  country: "Canada",
+  city: "Toronto",
+  short: "ca",
 };
