@@ -84,7 +84,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           <Slider {...sliderSettings} className="project-carousel">
             {props.projects.map((project, index) => (
               <div key={project.title} className="h-full">
-                <div className="relative h-full overflow-hidden rounded-lg bg-white/5  shadow-lg transition-all hover:shadow-xl dark:bg-zinc-900/50">
+                <div className="relative h-full overflow-hidden rounded-lg bg-white/5  shadow-lg transition-all dark:bg-zinc-900/50">
                   <div className="flex h-full flex-col gap-4">
                     <div className="relative aspect-video w-full overflow-hidden rounded-xl">
                       <Image

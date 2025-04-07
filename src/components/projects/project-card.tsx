@@ -34,7 +34,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         <div className="flex flex-col">
           <div className="flex items-center gap-3">
             <span className="relative h-5 w-5">
-              <Image src={props.favicon} alt="logo" fill />
+              <Image src={props.favicon} alt="logo" fill sizes="20px" />
             </span>
             <span className="text-sm font-semibold">{props.name}</span>
           </div>
