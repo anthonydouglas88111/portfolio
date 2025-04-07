@@ -45,14 +45,11 @@ export default function LandingHero() {
                 <h1 className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text py-2 text-5xl font-bold text-transparent sm:text-6xl md:text-7xl xl:text-8xl">
                   {siteMetadata.author}
                 </h1>
-                <span className="inline-block text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl">
-                  {siteMetadata.description}
-                </span>
               </div>
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
-                I am a Software Engineer specializing in building
+                {siteMetadata.description} specializing in building
                 high-performance, user-focused web applications. Skilled in{" "}
                 <span className="relative">
                   <span className="relative z-10 font-semibold text-accent">
