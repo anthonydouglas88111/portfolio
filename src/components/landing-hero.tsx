@@ -98,6 +98,7 @@ export default function LandingHero() {
               <div className="pointer-events-auto mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/assets/resume.pdf"
+                  target="_blank"
                   download
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-semibold text-white transition-all hover:scale-105 hover:bg-accent/90"
                 >
