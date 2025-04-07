@@ -31,6 +31,7 @@ export default function Navbar(props: NavbarProps) {
   };
 
   const isActive = (href: string) => {
+    if (!pathName) return false;
     if (href === "/blogs") {
       return pathName === href || pathName.startsWith(`${href}/`);
     }
@@ -38,7 +39,7 @@ export default function Navbar(props: NavbarProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 py-8 sm:px-14 md:px-20 bg-background/80 backdrop-blur-md">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-background/80 px-6 py-8 backdrop-blur-md sm:px-14 md:px-20">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         <Link
           href="/"

@@ -1,6 +1,5 @@
 import { NextSeo } from "next-seo";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 import BlogCard from "@/components/blogs/blog-card";
 import { BLOG_POSTS } from "@/data/blogs";
@@ -9,7 +8,10 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 export default function Blogs() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
-  const categories: string[] = ["all", ...Array.from(new Set(BLOG_POSTS.map((post) => post.category)))];
+  const categories: string[] = [
+    "all",
+    ...Array.from(new Set(BLOG_POSTS.map((post) => post.category))),
+  ];
 
   const handleCategoryClick = (category: string) => {
     if (category === "all") {
@@ -26,9 +28,10 @@ export default function Blogs() {
     });
   };
 
-  const filteredPosts = selectedCategories.length === 0
-    ? BLOG_POSTS
-    : BLOG_POSTS.filter((post) => selectedCategories.includes(post.category));
+  const filteredPosts =
+    selectedCategories.length === 0
+      ? BLOG_POSTS
+      : BLOG_POSTS.filter((post) => selectedCategories.includes(post.category));
 
   return (
     <>
@@ -78,7 +81,7 @@ export default function Blogs() {
                 key={category}
                 onClick={() => handleCategoryClick(category)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  (category === "all" && selectedCategories.length === 0) || 
+                  (category === "all" && selectedCategories.length === 0) ||
                   (category !== "all" && selectedCategories.includes(category))
                     ? "bg-accent text-accent-foreground"
                     : "bg-accent/10 text-accent hover:bg-accent/20"

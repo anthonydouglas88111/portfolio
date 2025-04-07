@@ -1,5 +1,6 @@
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blogs";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
@@ -11,18 +12,18 @@ export default function BlogPost() {
 
   if (!post) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex min-h-[700px] items-center justify-center md:max-h-[600px]">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-foreground">Post not found</h1>
           <p className="mt-4 text-muted-foreground">
-            The blog post you're looking for doesn't exist.
+            The blog post you&apos;re looking for doesn&apos;t exist.
           </p>
-          <a
+          <Link
             href="/blogs"
             className="mt-4 inline-block text-accent hover:text-accent/70"
           >
             Return to Blogs
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -133,7 +134,7 @@ export default function BlogPost() {
 
           <div className="prose prose-lg max-w-none dark:prose-invert">
             {post.content === "Coming soon..." ? (
-              <div className="bg-card rounded-lg border border-border p-6 text-center">
+              <div className="bg-card rounded-lg p-6 text-center">
                 <h2 className="text-xl font-semibold text-foreground">
                   Content Coming Soon
                 </h2>
@@ -157,13 +158,13 @@ export default function BlogPost() {
               developer community.
             </p>
             <div className="mt-4 flex gap-4">
-              <a
+              <Link
                 href={siteMetadata.github}
                 target="_blank"
                 className="text-accent hover:text-accent/70"
               >
                 GitHub
-              </a>
+              </Link>
             </div>
           </div>
         </div>

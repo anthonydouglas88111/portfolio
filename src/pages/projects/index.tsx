@@ -14,8 +14,7 @@ export default function Projects() {
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
           title: `Discover Projects by ${siteMetadata.author} - Software Engineer`,
-          description:
-            `Explore a showcase of projects crafted by ${siteMetadata.author}, a Software Engineer. Witness the fusion of creativity and technology in web development.`,
+          description: `Explore a showcase of projects crafted by ${siteMetadata.author}, a Software Engineer. Witness the fusion of creativity and technology in web development.`,
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,

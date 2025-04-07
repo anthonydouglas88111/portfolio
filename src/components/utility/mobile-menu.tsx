@@ -28,6 +28,7 @@ export default function MobileMenu({
   };
 
   const isActive = (href: string) => {
+    if (!pathName) return false;
     if (href === "/blogs") {
       return pathName === href || pathName.startsWith(`${href}/`);
     }
