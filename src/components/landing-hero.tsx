@@ -42,10 +42,10 @@ export default function LandingHero() {
             <FadeUp key="title-main" duration={0.6}>
               <div className="space-y-4">
                 <h1 className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text py-2 text-5xl font-bold text-transparent sm:text-6xl md:text-7xl xl:text-8xl">
-                  Anthony Douglas
+                  {siteMetadata.author}
                 </h1>
                 <span className="inline-block text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl">
-                  Software Engineer
+                  {siteMetadata.description}
                 </span>
               </div>
             </FadeUp>

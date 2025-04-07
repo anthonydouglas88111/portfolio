@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowTopRight } from "@/components/icons";
-import ProjectShowcaseList, { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
+import { motion } from "framer-motion";
+import { ArrowTopRight, GithubIcon } from "@/components/icons";
+import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
+import Slider from "react-slick";
 
 const generateImageData = (proj: ProjectShowcaseListItem[]) => {
   return proj.map((p) => p.image);
@@ -14,16 +15,40 @@ interface ProjectShowcaseProps {
 }
 
 export default function ProjectShowcase(props: ProjectShowcaseProps) {
-  const [currentImage, setCurrentImage] = useState<number>(0);
-  const [isHovered, setIsHovered] = useState(false);
-
   const images = useMemo(() => {
     return generateImageData(props.projects);
   }, [props.projects]);
 
-  const handleAnimate = (index: number) => {
-    if (index === currentImage) return;
-    setCurrentImage(index);
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1280, // lg
+        settings: {
+          slidesToShow: 2,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 640, // sm
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
@@ -44,99 +69,76 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           </p>
         </motion.div>
 
-        <div className="relative right-0 top-0 hidden lg:block">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={props.projects[currentImage].title}
-              initial={{ x: "100%", opacity: 0, scale: 0.8 }}
-              animate={{
-                x: "55%",
-                y: "50%",
-                opacity: 1,
-                scale: 1,
-                transition: {
-                  duration: 0.3,
-                },
-              }}
-              exit={{ x: "100%", opacity: 0, scale: 0.8 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-              }}
-              className="absolute right-0 top-0 -z-50"
-              onHoverStart={() => setIsHovered(true)}
-              onHoverEnd={() => setIsHovered(false)}
-            >
-              <motion.div
-                animate={{
-                  scale: isHovered ? 1.05 : 1,
-                  transition: { duration: 0.3 },
-                }}
-              >
-                <Image
-                  src={images[currentImage].LIGHT}
-                  unoptimized
-                  width={100}
-                  height={100}
-                  className="h-auto w-1/2 rounded-xl border border-zinc-300 shadow-lg transition-all duration-300 dark:hidden dark:border-accent/50"
-                  alt={`project ${currentImage}`}
-                />
-                {images[currentImage].DARK !== undefined && (
-                  <Image
-                    src={images[currentImage].DARK!}
-                    unoptimized
-                    width={100}
-                    height={100}
-                    className="hidden h-auto w-1/2 rounded-xl border border-zinc-300 shadow-lg transition-all duration-300 dark:inline-block dark:border-accent/20 dark:shadow-lg dark:shadow-emerald-400/5"
-                    alt={`project ${currentImage}`}
-                  />
-                )}
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        <div className="mt-8 hidden flex-col gap-6 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:flex">
-          {props.projects.map((proj, index) => (
-            <ProjectShowcaseList
-              activeProject={currentImage}
-              toggleList={handleAnimate}
-              data={proj}
-              key={index}
-            />
-          ))}
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-8 py-14 sm:grid-cols-2 sm:gap-8 sm:py-20 md:gap-10 lg:hidden">
-          {props.projects.map((proj) => (
-            <Link
-              key={proj.title}
-              href={proj.href}
-              className="group relative overflow-hidden rounded-2xl bg-white/5 p-6 shadow-lg transition-all hover:shadow-xl dark:bg-zinc-900/50"
-            >
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold text-accent sm:text-3xl">
-                    {proj.index + 1}.
-                  </span>
-                  <h3 className="text-2xl font-bold text-accent transition-colors duration-300 sm:text-3xl">
-                    {proj.title}
-                  </h3>
+        <div className="mt-8 lg:mt-12">
+          <Slider {...sliderSettings} className="project-carousel">
+            {props.projects.map((project, index) => (
+              <div key={project.title} className="h-full px-4">
+                <div className="relative h-full overflow-hidden rounded-2xl bg-white/5  shadow-lg transition-all hover:shadow-xl dark:bg-zinc-900/50">
+                  <div className="flex h-full flex-col gap-4">
+                    <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+                      <Image
+                        src={images[index].LIGHT}
+                        alt={project.title}
+                        fill
+                        className="object-cover dark:hidden"
+                        priority={index === 0}
+                      />
+                      {images[index].DARK && (
+                        <Image
+                          src={images[index].DARK}
+                          alt={project.title}
+                          fill
+                          className="hidden object-cover dark:block"
+                          priority={index === 0}
+                        />
+                      )}
+                    </div>
+                    <div className="flex flex-1 flex-col gap-4 p-4">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl font-bold text-accent sm:text-3xl">
+                          {index + 1}.
+                        </span>
+                        <h3 className="text-2xl font-bold text-accent transition-colors duration-300 sm:text-3xl">
+                          {project.title}
+                        </h3>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="mt-auto flex items-center justify-end gap-4">
+                        {project.sourceCodeHref && (
+                          <a
+                            href={project.sourceCodeHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
+                          >
+                            <span>Source Code</span>
+                            <GithubIcon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
+                          </a>
+                        )}
+                        <Link
+                          href={project.liveWebsiteHref}
+                          target="_blank"
+                          className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
+                        >
+                          <span>Live</span>
+                          <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p className="flex flex-wrap gap-2 text-base font-medium text-zinc-600 dark:text-zinc-400">
-                  {proj.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </p>
               </div>
-              <div className="absolute bottom-0 right-0 h-1 w-0 bg-accent transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+            ))}
+          </Slider>
         </div>
 
         <motion.div
@@ -144,7 +146,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center"
+          className="mt-8 text-center"
         >
           <Link
             href="/projects"

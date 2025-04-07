@@ -6,17 +6,17 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
     title: "Json Tree",
-    href: "/projects",
     tags: ["Nextjs", "Tailwindcss", "Monaco Editor", "Vercel"],
     image: {
       LIGHT: "/assets/images/projects/jsontreeLight.webp",
-      DARK: "/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/images/projects/jsontreeDark.webp",
+      DARK: "/assets/images/projects/jsontreeDark.webp",
     },
+    sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
+    liveWebsiteHref: "https://jsontree.vercel.app",
   },
   {
     index: 1,
     title: "Many Games",
-    href: "/projects",
     tags: [
       "Reactjs",
       "Tailwindcss",
@@ -30,16 +30,19 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       LIGHT: "/assets/images/projects/manyGamesLight.webp",
       DARK: "/assets/images/projects/manyGamesDark.webp",
     },
+    sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
+    liveWebsiteHref: "https://manygames.vercel.app",
   },
   {
     index: 2,
     title: "Kanban",
-    href: "/projects",
     tags: ["Reactjs", "Vite", "Tailwindcss", "Vercel", "Zustand", "React DND"],
     image: {
       LIGHT: "/assets/images/projects/kanbanLight.webp",
       DARK: "/assets/images/projects/kanbanDark.webp",
     },
+    sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
+    liveWebsiteHref: "https://kannban-board.vercel.app",
   },
 ];
 

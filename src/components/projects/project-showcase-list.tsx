@@ -7,12 +7,13 @@ import { classNames } from "@/utility/classNames";
 export type ProjectShowcaseListItem = {
   index: number;
   title: string;
-  href: string;
   tags: string[];
   image: {
     LIGHT: string;
     DARK?: string;
   };
+  sourceCodeHref: string;
+  liveWebsiteHref: string;
 };
 
 export interface ProjectShowcaseListProps {
@@ -42,7 +43,7 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
         {props.data.index + 1}.
       </span>
       <div className="flex flex-col gap-2">
-        <Link href={props.data.href} className="relative max-w-max">
+        <Link href={props.data.liveWebsiteHref} className="relative max-w-max">
           <span
             className={classNames(
               "hidden text-6xl font-semibold transition-colors duration-300 lg:block",
