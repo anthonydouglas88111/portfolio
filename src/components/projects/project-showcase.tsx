@@ -88,7 +88,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                   <div className="flex h-full flex-col gap-4">
                     <div className="relative aspect-video w-full overflow-hidden rounded-xl">
                       <Image
-                        src={images[index].LIGHT}
+                        src={images[index].LIGHT!}
                         alt={project.title}
                         fill
                         className="object-cover dark:hidden"
@@ -136,7 +136,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                           </Link>
                         )}
                         <Link
-                          href={project.liveWebsiteHref}
+                          href={project.liveWebsiteHref!}
                           target="_blank"
                           className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
                         >
