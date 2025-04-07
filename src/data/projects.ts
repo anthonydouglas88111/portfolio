@@ -1,5 +1,5 @@
 import { type ProjectCardProps } from "@/components/projects/project-card";
-import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
+import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [

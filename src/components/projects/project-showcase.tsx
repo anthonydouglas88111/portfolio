@@ -1,18 +1,29 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { ArrowTopRight, GithubIcon } from "@/components/icons";
-import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
-import Slider from "react-slick";
 
-const generateImageData = (proj: ProjectShowcaseListItem[]) => {
-  return proj.map((p) => p.image);
-};
+export interface ProjectShowcaseListItem {
+  index: number;
+  title: string;
+  tags: string[];
+  image: {
+    LIGHT: string;
+    DARK?: string;
+  };
+  sourceCodeHref: string;
+  liveWebsiteHref: string;
+}
 
 interface ProjectShowcaseProps {
   projects: ProjectShowcaseListItem[];
 }
+
+const generateImageData = (proj: ProjectShowcaseListItem[]) => {
+  return proj.map((p) => p.image);
+};
 
 export default function ProjectShowcase(props: ProjectShowcaseProps) {
   const images = useMemo(() => {
@@ -28,21 +39,21 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1280, // lg
+        breakpoint: 1280,
         settings: {
           slidesToShow: 2,
           arrows: true,
         },
       },
       {
-        breakpoint: 768, // md
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           arrows: true,
         },
       },
       {
-        breakpoint: 640, // sm
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           arrows: false,
@@ -72,8 +83,8 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
         <div className="mt-8 lg:mt-12">
           <Slider {...sliderSettings} className="project-carousel">
             {props.projects.map((project, index) => (
-              <div key={project.title} className="h-full px-4">
-                <div className="relative h-full overflow-hidden rounded-2xl bg-white/5  shadow-lg transition-all hover:shadow-xl dark:bg-zinc-900/50">
+              <div key={project.title} className="h-full">
+                <div className="relative h-full overflow-hidden rounded-lg bg-white/5  shadow-lg transition-all hover:shadow-xl dark:bg-zinc-900/50">
                   <div className="flex h-full flex-col gap-4">
                     <div className="relative aspect-video w-full overflow-hidden rounded-xl">
                       <Image

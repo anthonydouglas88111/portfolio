@@ -6,6 +6,7 @@
 
 .project-carousel .slick-slide {
   height: inherit !important;
+  padding: 16px;
 }
 
 .project-carousel .slick-slide > div {
