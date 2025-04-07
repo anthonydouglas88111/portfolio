@@ -2,7 +2,7 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Senior Software Engineer",
+    title: "Software Engineer",
     organisation: {
       name: "Riskified",
       href: "https://www.riskified.com/",
@@ -13,7 +13,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
       "Led a team of 7 to develop a scalable multi-agent AI system for analyzing large datasets, implementing a primary agent to manage general queries and route requests to specialized agents with 95% accuracy, and building a data analyst agent to query, validate syntax, and generate visualizations, improving analysis efficiency by 71%.",
   },
   {
-    title: "Software Engineer",
+    title: "Software Developer",
     organisation: {
       name: "Softermii",
       href: "https://www.softermii.com/",
@@ -35,7 +35,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
       "Designed and developed front-end components using React.js and Material-UI to enhance user engagement, transformed design concepts into visually compelling user interfaces to improve overall user experience, and built the entire back-end infrastructure on AWS, including setting up Amplify instances, configuring S3 buckets, and optimizing service performance.",
   },
   {
-    title: "Web Developer",
+    title: "Full Stack Developer",
     organisation: {
       name: "Codal",
       href: "https://codal.com/",

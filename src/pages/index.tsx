@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import { NextSeo } from "next-seo";
 
 import LandingHero from "@/components/landing-hero";
@@ -41,17 +39,13 @@ export default function Home() {
           },
         ]}
       />
-      <Head>
-        {siteMetadata.googleSiteVerification && (
-          <meta
-            name="google-site-verification"
-            content={siteMetadata.googleSiteVerification}
-          />
-        )}
-      </Head>
-      <LandingHero />
-      <SkillsShowcase skills={SKILLS_DATA} />
-      <ProjectShowcase projects={PROJECT_SHOWCASE} />
+      <section className="mx-auto w-full overflow-hidden px-6 sm:px-14 md:px-20">
+        <div className="mx-auto max-w-7xl">
+          <LandingHero />
+          <SkillsShowcase skills={SKILLS_DATA} />
+          <ProjectShowcase projects={PROJECT_SHOWCASE} />
+        </div>
+      </section>
     </>
   );
 }

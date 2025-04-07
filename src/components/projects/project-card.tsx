@@ -20,9 +20,12 @@ export default function ProjectCard(props: ProjectCardProps) {
     <motion.div
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
+      viewport={{ margin: "-100px" }}
       transition={{
         type: "spring",
-        duration: 0.4,
+        stiffness: 100,
+        damping: 20,
+        duration: 0.3,
       }}
       className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
     >

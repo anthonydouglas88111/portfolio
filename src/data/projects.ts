@@ -9,8 +9,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     href: "/projects",
     tags: ["Nextjs", "Tailwindcss", "Monaco Editor", "Vercel"],
     image: {
-      LIGHT: "/images/projects/jsontreeLight.webp",
-      DARK: "/images/projects/jsontreeDark.webp",
+      LIGHT: "/assets/images/projects/jsontreeLight.webp",
+      DARK: "/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/assets/images/projects/jsontreeDark.webp",
     },
   },
   {
@@ -27,8 +27,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       "Vercel",
     ],
     image: {
-      LIGHT: "/images/projects/manyGamesLight.webp",
-      DARK: "/images/projects/manyGamesDark.webp",
+      LIGHT: "/assets/images/projects/manyGamesLight.webp",
+      DARK: "/assets/images/projects/manyGamesDark.webp",
     },
   },
   {
@@ -37,8 +37,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     href: "/projects",
     tags: ["Reactjs", "Vite", "Tailwindcss", "Vercel", "Zustand", "React DND"],
     image: {
-      LIGHT: "/images/projects/kanbanLight.webp",
-      DARK: "/images/projects/kanbanDark.webp",
+      LIGHT: "/assets/images/projects/kanbanLight.webp",
+      DARK: "/assets/images/projects/kanbanDark.webp",
     },
   },
 ];
@@ -46,10 +46,10 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Json tree",
-    favicon: "/images/projects/logos/jsontree.ico",
+    favicon: "/assets/images/projects/logos/jsontree.ico",
     imageUrl: [
-      "/images/projects/jsontreeLight.webp",
-      "/images/projects/jsontreeDark.webp",
+      "/assets/images/projects/jsontreeLight.webp",
+      "/assets/images/projects/jsontreeDark.webp",
     ],
     description:
       "Visualize JSON data format in form of a tree or graph. Application is made using Nextjs, Tailwindcss and Monaco Editor. Design image can be downloaded from this app.",
@@ -58,11 +58,11 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Kanban app",
-    favicon: "/images/projects/logos/kanban.ico",
+    favicon: "/assets/images/projects/logos/kanban.ico",
     imageUrl: [
-      "/images/projects/kanbanLight.webp",
-      "/images/projects/kanbanDark.webp",
-      "/images/projects/kanbanCardLight.webp",
+      "/assets/images/projects/kanbanLight.webp",
+      "/assets/images/projects/kanbanDark.webp",
+      "/assets/images/projects/kanbanCardLight.webp",
     ],
     description:
       "Keep track of projects and tasks in different categories. Drag and drop card from tables. Assign user and priority to task and many more features. This app is made using Reactjs, Typescript, Tailwindcss and React-beautiful-dnd library.",
@@ -71,13 +71,13 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Many Games",
-    favicon: "/images/projects/logos/manygames.ico",
+    favicon: "/assets/images/projects/logos/manygames.ico",
     imageUrl: [
-      "/images/projects/manyGamesDark.webp",
-      "/images/projects/manyGamesLight.webp",
-      "/images/projects/manyGames2048.webp",
-      "/images/projects/manyGamesPuzzle.webp",
-      "/images/projects/manyGamesWordle.webp",
+      "/assets/images/projects/manyGamesDark.webp",
+      "/assets/images/projects/manyGamesLight.webp",
+      "/assets/images/projects/manyGames2048.webp",
+      "/assets/images/projects/manyGamesPuzzle.webp",
+      "/assets/images/projects/manyGamesWordle.webp",
     ],
     description:
       "Many short and fun games using Reactjs, Typescript and Tailwindcss with collaboration with other developers",
@@ -88,8 +88,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "My portfolio",
     favicon: "/favicon.ico",
     imageUrl: [
-      "/images/projects/portfolioDark.webp",
-      "/images/projects/portfolioLight.webp",
+      "/assets/images/projects/portfolioDark.webp",
+      "/assets/images/projects/portfolioLight.webp",
     ],
     description:
       "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
@@ -98,11 +98,11 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Covid Tracker",
-    favicon: "/images/projects/logos/covidtracker.ico",
+    favicon: "/assets/images/projects/logos/covidtracker.ico",
     imageUrl: [
-      "/images/projects/covidTracker.webp",
-      "/images/projects/covidTrackerMap.webp",
-      "/images/projects/covidTrackerTable.webp",
+      "/assets/images/projects/covidTracker.webp",
+      "/assets/images/projects/covidTrackerMap.webp",
+      "/assets/images/projects/covidTrackerTable.webp",
     ],
     description:
       "Get latest covid related stats in a table where user can filter using country and cases. It also has a map which show every countries data for quick view. It uses an open source api (disease.sh). Made using Reactjs, Javascript and MUI",
@@ -111,12 +111,12 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Stock predictor",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/assets/images/projects/logos/stockpredictor.ico",
     imageUrl: [
-      "/images/projects/stockPredictor.webp",
-      "/images/projects/stockPredictorCandleChart.webp",
-      "/images/projects/stockPredictorCompareChart.webp",
-      "/images/projects/stockPredictorLineChart.webp",
+      "/assets/images/projects/stockPredictor.webp",
+      "/assets/images/projects/stockPredictorCandleChart.webp",
+      "/assets/images/projects/stockPredictorCompareChart.webp",
+      "/assets/images/projects/stockPredictorLineChart.webp",
     ],
     description:
       "Get prediction of opening and closing price of stocks price. Frontend is made using Reactjs and backend is made using Flask and Machine learning model are trained using Tensorflow",

@@ -38,9 +38,13 @@ export default function About() {
           },
         ]}
       />
-      <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
+        <div className="mx-auto max-w-7xl">
+          <AboutHero />
+          <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
+          <ExperienceShowcaseList title="Education" details={EDUCATION} />
+        </div>
+      </section>
     </>
   );
 }

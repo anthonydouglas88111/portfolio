@@ -6,43 +6,43 @@ import {
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 // Languages
-import HtmlSvg from "@/public/icons/html.svg";
-import CssSvg from "@/public/icons/css.svg";
-import SassSvg from "@/public/icons/sass.svg";
-import JavascriptSvg from "@/public/icons/javascript.svg";
-import TypescriptSvg from "@/public/icons/typescript.svg";
-import PythonSvg from "@/public/icons/python.svg";
+import HtmlSvg from "@/public/assets/icons/html.svg";
+import CssSvg from "@/public/assets/icons/css.svg";
+import SassSvg from "@/public/assets/icons/sass.svg";
+import JavascriptSvg from "@/public/assets/icons/javascript.svg";
+import TypescriptSvg from "@/public/assets/icons/typescript.svg";
+import PythonSvg from "@/public/assets/icons/python.svg";
 
 // Libraries
-import ReactjsSvg from "@/public/icons/reactjs.svg";
-import NextjsSvg from "@/public/icons/nextjs.svg";
-import VuejsSvg from "@/public/icons/vuejs.svg";
-import ReduxSvg from "@/public/icons/redux.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-import MuiSvg from "@/public/icons/mui.svg";
-import AntdSvg from "@/public/icons/antd.svg";
-import BootstrapSvg from "@/public/icons/bootstrap.svg";
-import ViteSvg from "@/public/icons/vite.svg";
+import ReactjsSvg from "@/public/assets/icons/reactjs.svg";
+import NextjsSvg from "@/public/assets/icons/nextjs.svg";
+import VuejsSvg from "@/public/assets/icons/vuejs.svg";
+import ReduxSvg from "@/public/assets/icons/redux.svg";
+import TailwindcssSvg from "@/public/assets/icons/tailwindcss.svg";
+import MuiSvg from "@/public/assets/icons/mui.svg";
+import AntdSvg from "@/public/assets/icons/antd.svg";
+import BootstrapSvg from "@/public/assets/icons/bootstrap.svg";
+import ViteSvg from "@/public/assets/icons/vite.svg";
 
 // Backend
-import NodejsSvg from "@/public/icons/nodejs.svg";
-import ExpressSvg from "@/public/icons/express.svg";
-import SocketioSvg from "@/public/icons/socketio.svg";
-import DjangoSvg from "@/public/icons/django.svg";
-import FlaskSvg from "@/public/icons/flask.svg";
-import FastapiSvg from "@/public/icons/fastapi.svg";
+import NodejsSvg from "@/public/assets/icons/nodejs.svg";
+import ExpressSvg from "@/public/assets/icons/express.svg";
+import SocketioSvg from "@/public/assets/icons/socketio.svg";
+import DjangoSvg from "@/public/assets/icons/django.svg";
+import FlaskSvg from "@/public/assets/icons/flask.svg";
+import FastapiSvg from "@/public/assets/icons/fastapi.svg";
 
 // Database and ORMS
-import MongoDBSvg from "@/public/icons/mongodb.svg";
-import MysqlSvg from "@/public/icons/mysql.svg";
-import PostgresqlSvg from "@/public/icons/postgresql.svg";
-import PrismaSvg from "@/public/icons/prisma.svg";
+import MongoDBSvg from "@/public/assets/icons/mongodb.svg";
+import MysqlSvg from "@/public/assets/icons/mysql.svg";
+import PostgresqlSvg from "@/public/assets/icons/postgresql.svg";
+import PrismaSvg from "@/public/assets/icons/prisma.svg";
 
 // Tools and Tech
-import GitSvg from "@/public/icons/git.svg";
-import DockerSvg from "@/public/icons/docker.svg";
-import AwsSvg from "@/public/icons/aws.svg";
-import PostmanSvg from "@/public/icons/postman.svg";
+import GitSvg from "@/public/assets/icons/git.svg";
+import DockerSvg from "@/public/assets/icons/docker.svg";
+import AwsSvg from "@/public/assets/icons/aws.svg";
+import PostmanSvg from "@/public/assets/icons/postman.svg";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -90,12 +90,12 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         icon: VuejsSvg,
       },
       {
-        name: "React Router Dom",
-        icon: ReactRouterDomIcon,
-      },
-      {
         name: "Redux",
         icon: ReduxSvg,
+      },
+      {
+        name: "React Router Dom",
+        icon: ReactRouterDomIcon,
       },
       {
         name: "Tailwind CSS",
