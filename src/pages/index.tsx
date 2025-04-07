@@ -17,8 +17,7 @@ export default function Home() {
         openGraph={{
           url: siteMetadata.siteUrl,
           title: `${siteMetadata.author} | Software Engineer`,
-          description:
-            `Dive into the world of web development with ${siteMetadata.author}. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
+          description: `Dive into the world of web development with ${siteMetadata.author}. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
@@ -39,13 +38,9 @@ export default function Home() {
           },
         ]}
       />
-      <section className="mx-auto w-full overflow-hidden px-6 sm:px-14 md:px-20">
-        <div className="mx-auto max-w-7xl">
-          <LandingHero />
-          <SkillsShowcase skills={SKILLS_DATA} />
-          <ProjectShowcase projects={PROJECT_SHOWCASE} />
-        </div>
-      </section>
+      <LandingHero />
+      <SkillsShowcase skills={SKILLS_DATA} />
+      <ProjectShowcase projects={PROJECT_SHOWCASE} />
     </>
   );
 }

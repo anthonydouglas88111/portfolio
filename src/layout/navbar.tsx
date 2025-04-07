@@ -38,7 +38,7 @@ export default function Navbar(props: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
+    <header className="fixed top-0 left-0 right-0 z-50 px-6 py-8 sm:px-14 md:px-20 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
         <Link
           href="/"

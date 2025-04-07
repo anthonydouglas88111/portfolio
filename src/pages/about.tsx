@@ -16,8 +16,7 @@ export default function About() {
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
           title: `Learn About ${siteMetadata.author} | Software Engineer`,
-          description:
-            `Dive into the story of ${siteMetadata.author}, a Software Engineer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.`,
+          description: `Dive into the story of ${siteMetadata.author}, a Software Engineer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.`,
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
@@ -38,13 +37,9 @@ export default function About() {
           },
         ]}
       />
-      <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
-        <div className="mx-auto max-w-7xl">
-          <AboutHero />
-          <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-          <ExperienceShowcaseList title="Education" details={EDUCATION} />
-        </div>
-      </section>
+      <AboutHero />
+      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
+      <ExperienceShowcaseList title="Education" details={EDUCATION} />
     </>
   );
 }
