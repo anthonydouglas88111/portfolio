@@ -11,6 +11,8 @@ export const siteMetadata = {
   image: "/assets/static/homepage.png",
   email: "anthonydouglas88111@gmail.com",
   github: "https://github.com/anthonydouglas88111",
+  linkedin: "https://linkedin.com/in/anthonydouglas88111",
+  twitter: "https://twitter.com/anthonydouglas88111",
   locale: "en-US",
   country: "Canada",
   city: "Toronto",

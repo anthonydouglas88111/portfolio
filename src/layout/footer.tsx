@@ -56,28 +56,18 @@ export default function Footer() {
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-zinc-200 pt-8 dark:border-zinc-800 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="text-base text-zinc-600 dark:text-zinc-400">
-              © {currentYear} {siteMetadata.author}. All rights reserved.
+              © {currentYear}{" "}
+              <span className="font-bold">{siteMetadata.author}</span>{" "}
+            </span>
+            <span className="text-base text-zinc-600 dark:text-zinc-400">
+              All rights reserved.
             </span>
           </div>
-          <div className="flex gap-6">
-            <Link
-              href="#"
-              className="text-sm text-zinc-600 transition-colors hover:text-accent dark:text-zinc-400"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-zinc-600 transition-colors hover:text-accent dark:text-zinc-400"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-zinc-600 transition-colors hover:text-accent dark:text-zinc-400"
-            >
-              Sitemap
-            </Link>
+
+          <div className="flex items-center gap-2">
+            <span className="text-base text-zinc-600 dark:text-zinc-400">
+              Built with Next.js and Tailwind CSS
+            </span>
           </div>
         </div>
       </div>
