@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { MailIcon } from "@/components/icons";
 import ContactButton from "@/components/contact-form/contact-button";
 import ScrollUpButton from "@/components/scroll-up-button";
-import { MailIcon } from "@/components/icons";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

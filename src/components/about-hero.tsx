@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
-import profileImg from "@/public/assets/images/profile.png";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import profileImg from "@/public/assets/images/profile.png";
 import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {

@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 import { Montserrat } from "next/font/google";
 
 import Navbar from "@/layout/navbar";

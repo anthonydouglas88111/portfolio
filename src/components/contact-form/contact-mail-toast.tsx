@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from "react";
-
 import { CircleCheckIcon, TriangleAlertIcon } from "lucide-react";
 
 import CustomToast from "@/components/utility/custom-toast";

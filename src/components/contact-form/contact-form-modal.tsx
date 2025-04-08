@@ -1,7 +1,7 @@
 import { Dispatch, Fragment, SetStateAction, useState } from "react";
+import { MailIcon, XIcon } from "lucide-react";
 
 import { Dialog, Transition } from "@headlessui/react";
-import { MailIcon, XIcon } from "lucide-react";
 
 import ContactForm, {
   type ContactFormValues,

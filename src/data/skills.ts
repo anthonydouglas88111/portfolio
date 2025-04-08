@@ -3,7 +3,7 @@ import {
   ReactRouterDomIcon,
   VitePwaIcon,
 } from "@/components/icons";
-import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+import { type SkillsShowcaseProps } from "@/components/skills/skill-showcase";
 
 // Languages
 import HtmlSvg from "@/public/assets/icons/html.svg";
@@ -44,7 +44,7 @@ import DockerSvg from "@/public/assets/icons/docker.svg";
 import AwsSvg from "@/public/assets/icons/aws.svg";
 import PostmanSvg from "@/public/assets/icons/postman.svg";
 
-export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
+export const SKILL_SHOWCASE: SkillsShowcaseProps["skills"] = [
   {
     sectionName: "Languages",
     skills: [

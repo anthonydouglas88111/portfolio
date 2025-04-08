@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { AnimatePresence, AnimationProps, motion, wrap } from "framer-motion";
 import { BiSolidLeftArrow } from "react-icons/bi";
 

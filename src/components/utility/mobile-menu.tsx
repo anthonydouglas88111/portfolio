@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 
 import { Dialog, Transition } from "@headlessui/react";
 
-import ThemeSwitch from "@/components/utility/theme-switch";
 import { type NavbarProps } from "@/layout/navbar";
+import ThemeSwitch from "@/components/utility/theme-switch";
 import { classNames } from "@/utility/classNames";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 

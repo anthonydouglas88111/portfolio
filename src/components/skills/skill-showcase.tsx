@@ -1,8 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-import SkillPill, {
-  type SkillPillProps,
-} from "@/components/skills/skills-pill";
+import SkillPill, { type SkillPillProps } from "@/components/skills/skill-pill";
 import FadeRight from "@/animation/fade-right";
 import { useScreenBreakpoint } from "@/hooks/useScreenBreakpoint";
 import { useDebounceValue } from "@/hooks/useDebounceValue";

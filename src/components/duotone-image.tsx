@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Image, { ImageProps } from "next/image";
-import { StaticImageData } from "next/image";
+import Image, { ImageProps, StaticImageData } from "next/image";
 
 interface DuotoneImageProps extends Omit<ImageProps, "src"> {
   src: string | StaticImageData;

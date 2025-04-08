@@ -3,9 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+
 import { ArrowTopRight, GithubIcon } from "@/components/icons";
 
-export interface ProjectShowcaseListItem {
+export interface ProjectShowcaseListItemProps {
   index: number;
   title: string;
   tags: string[];
@@ -18,10 +19,10 @@ export interface ProjectShowcaseListItem {
 }
 
 interface ProjectShowcaseProps {
-  projects: ProjectShowcaseListItem[];
+  projects: ProjectShowcaseListItemProps[];
 }
 
-const generateImageData = (proj: ProjectShowcaseListItem[]) => {
+const generateImageData = (proj: ProjectShowcaseListItemProps[]) => {
   return proj.map((p) => p.image);
 };
 

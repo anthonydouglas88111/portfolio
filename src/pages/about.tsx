@@ -1,7 +1,9 @@
 import { NextSeo } from "next-seo";
+import { AnimatePresence } from "framer-motion";
 
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
+import PageTransitionAnimation from "@/components/page-transition-animation";
 import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
@@ -37,9 +39,12 @@ export default function About() {
           },
         ]}
       />
-      <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <AnimatePresence mode="wait">
+        <PageTransitionAnimation />
+        <AboutHero />
+        <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
+        <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      </AnimatePresence>
     </>
   );
 }

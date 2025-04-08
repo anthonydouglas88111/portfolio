@@ -1,10 +1,12 @@
 import { NextSeo } from "next-seo";
+import { AnimatePresence } from "framer-motion";
 
+import PageTransitionAnimation from "@/components/page-transition-animation";
 import LandingHero from "@/components/landing-hero";
-import SkillsShowcase from "@/components/skills/skills-showcase";
+import SkillShowcase from "@/components/skills/skill-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+import { SKILL_SHOWCASE } from "@/data/skills";
 import { PROJECT_SHOWCASE } from "@/data/projects";
-import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Home() {
@@ -38,9 +40,12 @@ export default function Home() {
           },
         ]}
       />
-      <LandingHero />
-      <SkillsShowcase skills={SKILLS_DATA} />
-      <ProjectShowcase projects={PROJECT_SHOWCASE} />
+      <AnimatePresence mode="wait">
+        <PageTransitionAnimation />
+        <LandingHero />
+        <SkillShowcase skills={SKILL_SHOWCASE} />
+        <ProjectShowcase projects={PROJECT_SHOWCASE} />
+      </AnimatePresence>
     </>
   );
 }

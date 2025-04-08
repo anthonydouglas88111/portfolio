@@ -26,7 +26,7 @@ export default function PageTransitionAnimation() {
         className="fixed bottom-0 right-full top-0 z-50 flex h-full w-screen items-center justify-center bg-accent"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}
-        transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
+        transition={{ delay: 0.1, duration: 0.6, ease: "easeInOut" }}
       >
         <div className="h-24 w-24 sm:h-32 sm:w-32">
           <svg

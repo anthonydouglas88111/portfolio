@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import { ArrowUpIcon } from "@/components/icons";
 
 export default function ScrollUpButton() {

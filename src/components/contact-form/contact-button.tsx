@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-
 import { MailIcon } from "lucide-react";
 
 import ContactFormModal from "@/components/contact-form/contact-form-modal";
