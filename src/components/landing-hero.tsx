@@ -99,7 +99,6 @@ export default function LandingHero() {
                 <Link
                   href="/assets/resume.pdf"
                   target="_blank"
-                  download
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-semibold text-white transition-all hover:scale-105 hover:bg-accent/90"
                 >
                   <FiDownload className="h-5 w-5" />
