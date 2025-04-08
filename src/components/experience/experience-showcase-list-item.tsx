@@ -1,9 +1,9 @@
 "use client";
 
-import { type RefObject, useRef, useState } from "react";
+import { type RefObject, useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
-import { ArrowUpRight, Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, ExternalLink } from "lucide-react";
 
 export interface ExperienceListIconProps {
   iconRef: RefObject<HTMLElement>;
@@ -18,7 +18,7 @@ function ShowCaseLiIcon(props: ExperienceListIconProps) {
   });
 
   return (
-    <figure className="absolute left-0 stroke-zinc-900">
+    <figure className="absolute left-0 stroke-zinc-900 dark:stroke-zinc-100">
       <svg width="75" height="75" viewBox="0 0 100 100">
         <circle
           cx="50"
@@ -34,8 +34,7 @@ function ShowCaseLiIcon(props: ExperienceListIconProps) {
           cx="50"
           cy="27"
           r="20"
-          className="fill-zinc-100 stroke-[5px] dark:fill-zinc-900"
-          stroke="url(#gradientStroke)"
+          className="fill-zinc-100 stroke-[5px] dark:fill-zinc-800"
         />
 
         <motion.circle
@@ -88,7 +87,6 @@ export default function ExperienceShowcaseListItem(
   props: ExperienceShowcaseListItemProps,
 ) {
   const ref = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
   const index = props.index || 0;
 
   // Animation variants
@@ -118,12 +116,6 @@ export default function ExperienceShowcaseListItem(
         viewport={{ once: true, margin: "-100px" }}
         custom={index}
         whileHover={{
-          y: -10,
-          x: 5,
-          scale: 1.03,
-          rotateZ: 1,
-          boxShadow:
-            "0 20px 40px -20px rgba(var(--accent-rgb), 0.4), 0 0 20px rgba(var(--accent-rgb), 0.2)",
           transition: { type: "spring", stiffness: 300, damping: 15 },
         }}
         className="relative overflow-hidden rounded-xl bg-white p-6 shadow-lg transition-all dark:bg-zinc-800/80 dark:shadow-zinc-900/30"
@@ -134,20 +126,17 @@ export default function ExperienceShowcaseListItem(
         <motion.div
           className="absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-accent/5"
           initial={{ scale: 0, opacity: 0 }}
-          whileHover={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.4 }}
         />
         <motion.div
           className="absolute -left-20 -top-20 h-40 w-40 rounded-full bg-accent/5"
           initial={{ scale: 0, opacity: 0 }}
-          whileHover={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
         />
 
         <div className="relative z-10">
           <motion.h3
             className="text-base font-bold text-zinc-900 dark:text-white sm:text-xl md:text-2xl"
-            whileHover={{ color: "var(--accent-color)" }}
             transition={{ duration: 0.2 }}
           >
             {props.title}{" "}
@@ -156,16 +145,9 @@ export default function ExperienceShowcaseListItem(
               className="group inline-flex items-center gap-1 text-accent transition-all hover:text-accent/80"
               target="_blank"
               rel="nofollow"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
             >
               @{props.organisation.name}
-              <motion.span
-                animate={{ x: isHovered ? 5 : 0, y: isHovered ? -5 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <ArrowUpRight className="h-4 w-4" />
-              </motion.span>
+              <motion.span transition={{ duration: 0.2 }}></motion.span>
             </Link>
           </motion.h3>
 
@@ -202,10 +184,7 @@ export default function ExperienceShowcaseListItem(
             transition={{ delay: 0.3 }}
           >
             <motion.div
-              whileHover={{
-                scale: 1.1,
-                x: 5,
-              }}
+              whileHover={{ y: -1, x: 5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <Link
