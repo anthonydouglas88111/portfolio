@@ -1,6 +1,7 @@
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import { BLOG_POSTS } from "@/data/blogs";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
@@ -124,7 +125,7 @@ export default function BlogPost() {
 
           {post.image && (
             <div className="mb-8 overflow-hidden rounded-lg">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
                 className="h-auto w-full object-cover"
