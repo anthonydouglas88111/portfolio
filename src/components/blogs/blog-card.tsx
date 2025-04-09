@@ -30,7 +30,7 @@ export default function BlogCard(props: BlogCardProps) {
       className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
     >
       <Link href={`/blogs/${props.slug}`}>
-        <article className="bg-card group relative flex flex-col overflow-hidden rounded-lg border border-border transition-all">
+        <article className="bg-card group relative flex h-full flex-col overflow-hidden rounded-lg transition-all">
           <div className="relative h-60 w-full overflow-hidden">
             <Image
               src={props.image}
@@ -40,7 +40,7 @@ export default function BlogCard(props: BlogCardProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="flex flex-col gap-2 p-6">
+          <div className="flex flex-1 flex-col gap-2 p-6">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span>{props.category}</span>
               <span>•</span>

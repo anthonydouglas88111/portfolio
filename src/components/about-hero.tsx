@@ -125,7 +125,7 @@ export default function AboutHero() {
       <div className="mt-16 w-full lg:mt-0 lg:w-1/2">
         <FadeUp key="hero-content" duration={0.6}>
           <div className="relative">
-            <h1 className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-5xl font-bold text-transparent sm:text-6xl md:text-6xl lg:text-5xl xl:text-7xl">
+            <h1 className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text py-1 text-5xl font-bold text-transparent sm:text-6xl md:text-6xl lg:text-5xl xl:text-7xl">
               {siteMetadata.author}
             </h1>
             <motion.div

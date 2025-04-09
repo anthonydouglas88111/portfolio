@@ -64,7 +64,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
   };
 
   return (
-    <section className="relative overflow-hidden py-16">
+    <section className="relative overflow-hidden px-6 py-16 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,11 +87,12 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
               <div key={project.title} className="h-full">
                 <div className="relative h-full overflow-hidden rounded-lg bg-white/5  shadow-lg transition-all dark:bg-zinc-900/50">
                   <div className="flex h-full flex-col gap-4">
-                    <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+                    <div className="relative aspect-video w-full overflow-hidden">
                       <Image
                         src={images[index].LIGHT!}
                         alt={project.title}
                         fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                         className="object-cover dark:hidden"
                         priority={index === 0}
                       />
@@ -100,6 +101,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                           src={images[index].DARK!}
                           alt={project.title}
                           fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                           className="hidden object-cover dark:block"
                           priority={index === 0}
                         />

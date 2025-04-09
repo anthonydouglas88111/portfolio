@@ -34,7 +34,7 @@ export default function LandingHero() {
       }}
       transition={{ type: "spring", stiffness: 100 }}
       ref={ref}
-      className="pointer-events-none relative flex h-[calc(100vh-10rem)] items-center overflow-hidden"
+      className="pointer-events-none relative flex h-[calc(100vh-10rem)] items-center overflow-hidden px-6 py-16 sm:px-14 md:px-20"
     >
       <div className="relative w-full">
         <div className="mx-auto max-w-7xl">
@@ -83,8 +83,8 @@ export default function LandingHero() {
                     HTML
                   </span>
                   <span className="absolute bottom-0 left-0 h-2 w-full -rotate-1 bg-accent/20" />
-                </span>
-                {" "}and{" "}
+                </span>{" "}
+                and{" "}
                 <span className="relative">
                   <span className="relative z-10 font-semibold text-accent">
                     CSS

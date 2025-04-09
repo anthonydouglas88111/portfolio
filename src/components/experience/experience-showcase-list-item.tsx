@@ -18,7 +18,7 @@ function ShowCaseLiIcon(props: ExperienceListIconProps) {
   });
 
   return (
-    <figure className="absolute left-0 stroke-zinc-900 dark:stroke-zinc-100">
+    <figure className="absolute -left-[104px] stroke-zinc-900 dark:stroke-zinc-100">
       <svg width="75" height="75" viewBox="0 0 100 100">
         <circle
           cx="50"
@@ -106,7 +106,10 @@ export default function ExperienceShowcaseListItem(
   };
 
   return (
-    <li ref={ref} className="mx-auto mb-16 flex w-[60%] flex-col gap-1">
+    <li
+      ref={ref}
+      className="relative mx-auto mb-16 flex w-[80%] flex-col gap-1"
+    >
       <ShowCaseLiIcon iconRef={ref} index={index} />
 
       <motion.div
@@ -152,22 +155,13 @@ export default function ExperienceShowcaseListItem(
           </motion.h3>
 
           <div className="mt-3 flex flex-wrap items-center gap-4">
-            <motion.div
-              className="flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1.5"
-              whileHover={{
-                backgroundColor: "rgba(var(--accent-rgb), 0.2)",
-                scale: 1.05,
-              }}
-            >
+            <motion.div className="flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1.5">
               <Calendar className="h-3.5 w-3.5 text-accent" />
               <span className="text-xs font-medium text-accent">
                 {props.date}
               </span>
             </motion.div>
-            <motion.div
-              className="flex items-center gap-1.5 text-sm font-medium text-zinc-600 dark:text-zinc-400"
-              whileHover={{ scale: 1.05 }}
-            >
+            <motion.div className="flex items-center gap-1.5 text-sm font-medium text-zinc-600 dark:text-zinc-400">
               <MapPin className="h-3.5 w-3.5" />
               <span>{props.location}</span>
             </motion.div>

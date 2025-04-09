@@ -23,10 +23,7 @@ export default function ExperienceShowcaseList(
   });
 
   return (
-    <div className="relative mx-auto max-w-7xl px-6 py-16 sm:px-14 md:px-20">
-      <div className="absolute -left-10 -top-20 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
-      <div className="absolute -bottom-20 -right-10 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
-
+    <div className="relative mx-auto max-w-7xl overflow-hidden px-6 py-16 sm:px-14 md:px-20">
       <div className="relative mb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,8 +65,8 @@ export default function ExperienceShowcaseList(
           {props.details.map((_details, index) => (
             <ExperienceShowcaseListItem
               key={index}
-              {..._details}
               index={index}
+              {..._details}
             />
           ))}
         </ul>

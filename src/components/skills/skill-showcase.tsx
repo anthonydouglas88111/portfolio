@@ -16,7 +16,7 @@ export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
   const isMobile = useScreenBreakpoint(640);
   const isMobileDebonced = useDebounceValue(isMobile, 600);
   return (
-    <section className="relative overflow-hidden py-16">
+    <section className="relative overflow-hidden px-6 py-16 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
