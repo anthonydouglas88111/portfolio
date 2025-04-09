@@ -41,10 +41,10 @@ export default function Home() {
         ]}
       />
       <AnimatePresence mode="wait">
-        <PageTransitionAnimation />
-        <LandingHero />
-        <SkillShowcase skills={SKILL_SHOWCASE} />
-        <ProjectShowcase projects={PROJECT_SHOWCASE} />
+        <PageTransitionAnimation key="page-transition" />
+        <LandingHero key="landing-hero" />
+        <SkillShowcase key="skill-showcase" skills={SKILL_SHOWCASE} />
+        <ProjectShowcase key="project-showcase" projects={PROJECT_SHOWCASE} />
       </AnimatePresence>
     </>
   );

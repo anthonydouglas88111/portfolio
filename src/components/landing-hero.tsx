@@ -84,7 +84,7 @@ export default function LandingHero() {
                   </span>
                   <span className="absolute bottom-0 left-0 h-2 w-full -rotate-1 bg-accent/20" />
                 </span>
-                and{" "}
+                {" "}and{" "}
                 <span className="relative">
                   <span className="relative z-10 font-semibold text-accent">
                     CSS

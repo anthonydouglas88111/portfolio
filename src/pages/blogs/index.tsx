@@ -68,7 +68,7 @@ export default function Blogs() {
         ]}
       />
       <AnimatePresence mode="wait">
-        <PageTransitionAnimation />
+        <PageTransitionAnimation key="page-transition" />
         <section className="mx-auto mt-6 w-full gap-20 px-6 pb-16 sm:mt-12 sm:px-14 md:px-20">
           <div className="mx-auto max-w-7xl">
             <h1 className="text-2xl font-semibold text-foreground md:text-4xl">

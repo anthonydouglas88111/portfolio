@@ -40,10 +40,10 @@ export default function About() {
         ]}
       />
       <AnimatePresence mode="wait">
-        <PageTransitionAnimation />
-        <AboutHero />
-        <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-        <ExperienceShowcaseList title="Education" details={EDUCATION} />
+        <PageTransitionAnimation key="page-transition" />
+        <AboutHero key="about-hero" />
+        <ExperienceShowcaseList key="experience" title="Experience" details={EXPERIENCE} />
+        <ExperienceShowcaseList key="education" title="Education" details={EDUCATION} />
       </AnimatePresence>
     </>
   );

@@ -7,7 +7,7 @@ import PageTransitionAnimation from "@/components/page-transition-animation";
 export default function PageNotFound() {
   return (
     <AnimatePresence mode="wait">
-      <PageTransitionAnimation />
+      <PageTransitionAnimation key="page-transition" />
       <div className="relative flex min-h-[700px] items-center justify-center overflow-hidden bg-background md:max-h-[600px]">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

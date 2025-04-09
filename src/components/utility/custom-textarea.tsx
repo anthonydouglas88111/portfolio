@@ -10,9 +10,10 @@ const CustomTextarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <textarea
         ref={ref}
+        rows={4}
         {...props}
         className={classNames(
-          "w-full rounded-lg border-none bg-background font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-accent focus-within:ring-accent",
+          "w-full rounded-lg border-none bg-background p-2 font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-accent focus-within:ring-accent lg:p-4",
           className,
         )}
       />

@@ -79,17 +79,9 @@ export default function ContactForm({
         onSubmit={handleSubmit}
         validateOnChange
       >
-        <Form className="mt-6 flex flex-col gap-3">
+        <Form className="flex flex-col gap-4">
           {FormFieldsData.map((form) => (
             <div key={form.name} className="flex flex-col gap-1">
-              <div>
-                <label
-                  htmlFor={form.name}
-                  className="inline font-medium text-background"
-                >
-                  {form.label}
-                </label>
-              </div>
               <div className="relative">
                 <Field name={form.name}>
                   {({ field, meta }: FormiKInputFieldProps<string>) =>
