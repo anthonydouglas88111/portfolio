@@ -40,7 +40,7 @@ export default function Home() {
           },
         ]}
       />
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <PageTransitionAnimation key="page-transition" />
         <LandingHero key="landing-hero" />
         <SkillShowcase key="skill-showcase" skills={SKILL_SHOWCASE} />

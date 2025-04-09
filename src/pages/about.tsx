@@ -39,7 +39,7 @@ export default function About() {
           },
         ]}
       />
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <PageTransitionAnimation key="page-transition" />
         <AboutHero key="about-hero" />
         <ExperienceShowcaseList key="experience" title="Experience" details={EXPERIENCE} />
