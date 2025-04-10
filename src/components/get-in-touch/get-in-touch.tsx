@@ -56,81 +56,92 @@ export default function GetInTouch() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="hover:shadow-3xl mx-6 mt-12 grid max-w-7xl grid-cols-1 gap-12 rounded-3xl bg-gradient-to-br from-accent via-accent/90 to-accent/80 px-8 py-12 text-white shadow-2xl backdrop-blur-sm transition-all duration-300 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700/50 sm:mx-14 lg:mt-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-16"
-    >
-      <div className="space-y-8 ">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl"
-        >
-          Get In Touch
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg leading-relaxed text-white/90"
-        >
-          I&apos;m currently looking for new opportunities to collaborate on
-          interesting projects. Whether you have a question or just want to say
-          hi, I&apos;ll try my best to get back to you!
-        </motion.p>
+    <section className="relative overflow-hidden px-6 py-16 sm:px-14 md:px-20">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="hover:shadow-3xl mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-12 rounded-3xl bg-gradient-to-br from-accent via-accent/90 to-accent/80 px-8 py-12 text-white shadow-2xl backdrop-blur-sm transition-all duration-300 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700/50 lg:mt-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-16"
+      >
+        <div className="space-y-8 ">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl"
+          >
+            Get In Touch
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-lg leading-relaxed text-white/90"
+          >
+            I&apos;m currently looking for new opportunities to collaborate on
+            interesting projects. Whether you have a question or just want to
+            say hi, I&apos;ll try my best to get back to you!
+          </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="space-y-6"
-        >
-          <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4">
-            <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
-              <MailIcon className="h-5 w-5 text-accent/90" />
-            </div>
-            <Link
-              href={`mailto:${siteMetadata.email}`}
-              className="text-lg text-white/90 transition-colors hover:text-white"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="space-y-6"
+          >
+            <motion.div
+              whileHover={{ x: 5 }}
+              className="flex items-center gap-4"
             >
-              {siteMetadata.email}
-            </Link>
-          </motion.div>
-          <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4">
-            <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
-              <PhoneIcon className="h-5 w-5 text-accent/90" />
-            </div>
-            <Link
-              href={`tel:${siteMetadata.phone.replace(/\D/g, "")}`}
-              className="text-lg text-white/90 transition-colors hover:text-white"
+              <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
+                <MailIcon className="h-5 w-5 text-accent/90" />
+              </div>
+              <Link
+                href={`mailto:${siteMetadata.email}`}
+                className="text-lg text-white/90 transition-colors hover:text-white"
+              >
+                {siteMetadata.email}
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ x: 5 }}
+              className="flex items-center gap-4"
             >
-              {siteMetadata.phone}
-            </Link>
+              <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
+                <PhoneIcon className="h-5 w-5 text-accent/90" />
+              </div>
+              <Link
+                href={`tel:${siteMetadata.phone.replace(/\D/g, "")}`}
+                className="text-lg text-white/90 transition-colors hover:text-white"
+              >
+                {siteMetadata.phone}
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ x: 5 }}
+              className="flex items-center gap-4"
+            >
+              <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
+                <LocationIcon className="h-5 w-5 text-accent/90" />
+              </div>
+              <span className="text-lg text-white/90">
+                {siteMetadata.city}, {siteMetadata.country}
+              </span>
+            </motion.div>
           </motion.div>
-          <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4">
-            <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
-              <LocationIcon className="h-5 w-5 text-accent/90" />
-            </div>
-            <span className="text-lg text-white/90">
-              {siteMetadata.city}, {siteMetadata.country}
-            </span>
-          </motion.div>
-        </motion.div>
-      </div>
+        </div>
 
-      <ContactForm
-        isSubmitting={isSendingMail}
-        handleSubmit={handleSubmit}
-        formRef={formRef}
-      />
-      <ContactMailToast toastState={toastState} showToast={setToastState} />
-    </motion.div>
+        <ContactForm
+          isSubmitting={isSendingMail}
+          handleSubmit={handleSubmit}
+          formRef={formRef}
+        />
+        <ContactMailToast toastState={toastState} showToast={setToastState} />
+      </motion.div>
+    </section>
   );
 }
