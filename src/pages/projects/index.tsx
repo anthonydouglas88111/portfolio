@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 
 import ProjectCard from "@/components/projects/project-card";
 import PageTransitionAnimation from "@/components/page-transition-animation";
