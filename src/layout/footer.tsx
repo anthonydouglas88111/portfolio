@@ -28,8 +28,8 @@ export default function Footer() {
 
           <div className="flex items-center gap-2">
             <span className="text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
-              Designed & Built with <span className="text-accent">❤️</span> by
-              {metadata.name}
+              Designed & Built with <span className="text-accent">❤️</span> by{" "}
+              <span className="font-bold text-accent">{metadata.name}</span>
             </span>
           </div>
         </motion.div>
