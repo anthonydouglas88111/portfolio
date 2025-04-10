@@ -43,7 +43,7 @@ export default function BlogShowcase({ blogs }: BlogShowcaseProps) {
   };
 
   return (
-    <section className="relative z-10 overflow-hidden px-6 py-16 sm:px-14 md:px-20">
+    <section className="relative overflow-hidden px-6 py-16 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
