@@ -64,6 +64,7 @@ const initialFormValues: ContactFormValues = {
 
 export interface ContactFormProps {
   isSubmitting: boolean;
+  // eslint-disable-next-line
   handleSubmit: (values: ContactFormValues) => Promise<void>;
   formRef?: RefObject<FormikProps<ContactFormValues>>;
 }

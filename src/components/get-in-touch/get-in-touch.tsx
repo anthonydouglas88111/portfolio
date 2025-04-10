@@ -125,9 +125,9 @@ export default function GetInTouch() {
         </motion.div>
       </div>
 
-      <ContactForm 
-        isSubmitting={isSendingMail} 
-        handleSubmit={handleSubmit} 
+      <ContactForm
+        isSubmitting={isSendingMail}
+        handleSubmit={handleSubmit}
         formRef={formRef}
       />
       <ContactMailToast toastState={toastState} showToast={setToastState} />
