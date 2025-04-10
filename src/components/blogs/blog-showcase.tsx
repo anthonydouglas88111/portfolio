@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 
 import { ArrowTopRight } from "@/components/icons";
-import BlogCard, { BlogCardProps } from "./blog-card";
+import { BlogCardProps } from "./blog-card";
 
 interface BlogShowcaseProps {
   blogs: BlogCardProps[];
