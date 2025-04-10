@@ -42,7 +42,7 @@ export default function BlogCard(props: BlogCardProps) {
             />
           </div>
           <div className="flex flex-1 flex-col gap-4 p-6">
-            <div className="flex flex-1 flex-col gap-4 justify-between">
+            <div className="flex flex-1 flex-col justify-between gap-4">
               <div className="flex items-center justify-between gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <BookOpen className="h-4 w-4" />
