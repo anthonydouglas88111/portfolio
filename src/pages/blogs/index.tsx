@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
 import BlogCard from "@/components/blogs/blog-card";
-import { BLOG_POSTS } from "@/data/blogs";
+import { BLOG_DATA } from "@/data/blogs";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Blogs() {
@@ -13,7 +13,7 @@ export default function Blogs() {
 
   const categories: string[] = [
     "all",
-    ...Array.from(new Set(BLOG_POSTS.map((post) => post.category))),
+    ...Array.from(new Set(BLOG_DATA.map((post) => post.category))),
   ];
 
   const handleCategoryClick = (category: string) => {
@@ -33,8 +33,8 @@ export default function Blogs() {
 
   const filteredPosts =
     selectedCategories.length === 0
-      ? BLOG_POSTS
-      : BLOG_POSTS.filter((post) => selectedCategories.includes(post.category));
+      ? BLOG_DATA
+      : BLOG_DATA.filter((post) => selectedCategories.includes(post.category));
 
   return (
     <>

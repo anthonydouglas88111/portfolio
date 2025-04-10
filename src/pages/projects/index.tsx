@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import ProjectCard from "@/components/projects/project-card";
 import PageTransitionAnimation from "@/components/page-transition-animation";
-import { PROJECTS_CARD } from "@/data/projects";
+import { PROJECT_DATA } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Projects() {
@@ -14,10 +14,8 @@ export default function Projects() {
 
   const filteredProjects =
     selectedCategory === "all"
-      ? PROJECTS_CARD
-      : PROJECTS_CARD.filter(
-          (project) => project.category === selectedCategory,
-        );
+      ? PROJECT_DATA
+      : PROJECT_DATA.filter((project) => project.category === selectedCategory);
 
   return (
     <>

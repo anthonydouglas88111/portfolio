@@ -5,14 +5,14 @@ import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
-import { BLOG_POSTS } from "@/data/blogs";
+import { BLOG_DATA } from "@/data/blogs";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function BlogPost() {
   const router = useRouter();
   const { slug } = router.query;
 
-  const post = BLOG_POSTS.find((post) => post.slug === slug);
+  const post = BLOG_DATA.find((post) => post.slug === slug);
 
   if (!post) {
     return (

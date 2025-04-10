@@ -7,33 +7,25 @@ import { motion } from "framer-motion";
 import { ArrowTopRight, GithubIcon } from "@/components/icons";
 
 export interface ProjectShowcaseListItemProps {
-  index: number;
+  id: string;
   title: string;
-  tags: string[];
+  skills: string[];
   image: {
     LIGHT: string;
     DARK?: string;
   };
-  sourceCodeHref: string;
-  liveWebsiteHref: string;
+  sourceCodeHref?: string;
+  liveWebsiteHref?: string;
 }
 
 interface ProjectShowcaseProps {
   projects: ProjectShowcaseListItemProps[];
 }
 
-const generateImageData = (proj: ProjectShowcaseListItemProps[]) => {
-  return proj.map((p) => p.image);
-};
-
 export default function ProjectShowcase(props: ProjectShowcaseProps) {
-  const images = useMemo(() => {
-    return generateImageData(props.projects);
-  }, [props.projects]);
-
   const sliderSettings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -86,19 +78,19 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
             {props.projects.map((project, index) => (
               <div key={project.title} className="h-full">
                 <div className="relative h-full overflow-hidden rounded-lg bg-white/5  shadow-lg transition-all dark:bg-zinc-900/50">
-                  <div className="flex h-full flex-col gap-4">
+                  <div className="flex h-full flex-col">
                     <div className="relative aspect-video w-full overflow-hidden">
                       <Image
-                        src={images[index].LIGHT!}
+                        src={project.image.LIGHT!}
                         alt={project.title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                         className="object-cover dark:hidden"
                         priority={index === 0}
                       />
-                      {images[index].DARK && (
+                      {project.image.DARK && (
                         <Image
-                          src={images[index].DARK!}
+                          src={project.image.DARK!}
                           alt={project.title}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
@@ -117,12 +109,12 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                         </h3>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, tagIndex) => (
+                        {project.skills.map((skill, tagIndex) => (
                           <span
                             key={tagIndex}
                             className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent"
                           >
-                            #{tag}
+                            {skill}
                           </span>
                         ))}
                       </div>

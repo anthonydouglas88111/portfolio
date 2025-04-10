@@ -1,6 +1,6 @@
 import { type BlogCardProps } from "@/components/blogs/blog-card";
 
-export const BLOG_POSTS: BlogCardProps[] = [
+export const BLOG_DATA: BlogCardProps[] = [
   {
     id: "1",
     title: "Building Scalable Web Applications with Next.js",

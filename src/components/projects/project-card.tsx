@@ -7,14 +7,15 @@ import Carousel from "@/components/utility/carousel";
 import { GithubIcon } from "@/components/icons";
 
 export interface ProjectCardProps {
-  name: string;
-  favicon: string;
-  imageUrl: string[];
-  description: string;
-  sourceCodeHref: string;
-  liveWebsiteHref?: string;
+  id: string;
+  title: string;
   category: string;
   skills: string[];
+  description: string;
+  favicon: string;
+  images: string[];
+  sourceCodeHref: string;
+  liveWebsiteHref?: string;
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
@@ -33,7 +34,7 @@ export default function ProjectCard(props: ProjectCardProps) {
     >
       <div className="flex h-full flex-col">
         <div className="relative w-full">
-          <Carousel images={props.imageUrl} aspectRatio={2.1} />
+          <Carousel images={props.images} aspectRatio={2.1} />
         </div>
         <div className="flex h-full flex-1 flex-col justify-between gap-4 p-3 text-foreground sm:p-4">
           <div className="flex flex-col">
@@ -41,7 +42,7 @@ export default function ProjectCard(props: ProjectCardProps) {
               <span className="relative h-5 w-5">
                 <Image src={props.favicon} alt="logo" fill sizes="20px" />
               </span>
-              <span className="text-sm font-semibold">{props.name}</span>
+              <span className="text-sm font-semibold">{props.title}</span>
             </div>
             <div className="mt-3">
               <p className="text-xs md:text-sm">{props.description}</p>
