@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -65,7 +64,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl">
+          <h2 className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text p-2 text-3xl font-bold text-transparent sm:text-4xl md:text-5xl">
             Featured Projects
           </h2>
           <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
@@ -76,73 +75,73 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
         <div className="mt-8 lg:mt-12">
           <Slider {...sliderSettings} className="project-carousel">
             {props.projects.map((project, index) => (
-              <div key={project.title} className="h-full">
-                <div className="relative h-full overflow-hidden rounded-lg bg-white/5  shadow-lg transition-all dark:bg-zinc-900/50">
-                  <div className="flex h-full flex-col">
-                    <div className="relative aspect-video w-full overflow-hidden">
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="h-full bg-background"
+              >
+                <div className="relative grid h-full grid-rows-[auto_1fr] overflow-hidden rounded-lg bg-white/5 shadow-lg transition-all dark:bg-zinc-900/50">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src={project.image.LIGHT!}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      className="object-cover dark:hidden"
+                      priority={index === 0}
+                    />
+                    {project.image.DARK && (
                       <Image
-                        src={project.image.LIGHT!}
+                        src={project.image.DARK!}
                         alt={project.title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                        className="object-cover dark:hidden"
+                        className="hidden object-cover dark:block"
                         priority={index === 0}
                       />
-                      {project.image.DARK && (
-                        <Image
-                          src={project.image.DARK!}
-                          alt={project.title}
-                          fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                          className="hidden object-cover dark:block"
-                          priority={index === 0}
-                        />
-                      )}
-                    </div>
-                    <div className="flex flex-1 flex-col gap-4 p-4">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl font-bold text-accent sm:text-3xl">
-                          {index + 1}.
+                    )}
+                  </div>
+                  <div className="flex flex-col gap-4 p-4">
+                    <h3 className="line-clamp-2 text-2xl font-bold text-accent transition-colors duration-300 sm:text-3xl">
+                      {project.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {project.skills.map((skill, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent"
+                        >
+                          {skill}
                         </span>
-                        <h3 className="text-2xl font-bold text-accent transition-colors duration-300 sm:text-3xl">
-                          {project.title}
-                        </h3>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {project.skills.map((skill, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="mt-auto flex items-center justify-end gap-4">
-                        {project.sourceCodeHref && (
-                          <Link
-                            href={project.sourceCodeHref}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
-                          >
-                            <span>Source Code</span>
-                            <GithubIcon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-                          </Link>
-                        )}
+                      ))}
+                    </div>
+                    <div className="mt-auto flex items-center justify-end gap-4">
+                      {project.sourceCodeHref && (
                         <Link
-                          href={project.liveWebsiteHref!}
+                          href={project.sourceCodeHref}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
                         >
-                          <span>Live</span>
-                          <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                          <span>Source Code</span>
+                          <GithubIcon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                         </Link>
-                      </div>
+                      )}
+                      <Link
+                        href={project.liveWebsiteHref!}
+                        target="_blank"
+                        className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
+                      >
+                        <span>Live</span>
+                        <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </Slider>
         </div>

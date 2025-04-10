@@ -5,9 +5,11 @@ import PageTransitionAnimation from "@/components/page-transition-animation";
 import LandingHero from "@/components/landing-hero";
 import SkillShowcase from "@/components/skills/skill-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+import BlogShowcase from "@/components/blogs/blog-showcase";
 import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { SKILL_SHOWCASE } from "@/data/skills";
 import { PROJECT_SHOWCASE } from "@/data/projects";
+import { BLOG_DATA } from "@/data/blogs";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Home() {
@@ -46,6 +48,7 @@ export default function Home() {
         <LandingHero key="landing-hero" />
         <SkillShowcase key="skill-showcase" skills={SKILL_SHOWCASE} />
         <ProjectShowcase key="project-showcase" projects={PROJECT_SHOWCASE} />
+        <BlogShowcase key="blog-showcase" blogs={BLOG_DATA} />
         <GetInTouch key="get-in-touch" />
       </AnimatePresence>
     </>

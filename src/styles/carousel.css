@@ -1,7 +1,10 @@
+/* Project Carousel Styles */
 .project-carousel {
-  /* margin: 0 -1rem;
-  padding: 0 1rem; */
   padding: 16px 0;
+}
+
+.project-carousel .slick-track {
+  display: flex;
 }
 
 .project-carousel .slick-slide {
@@ -47,9 +50,63 @@
   font-size: 40px;
 }
 
+/* Blog Carousel Styles */
+.blog-carousel {
+  padding: 16px 0;
+}
+
+.blog-carousel .slick-track {
+  display: flex;
+}
+
+.blog-carousel .slick-slide {
+  height: inherit !important;
+  padding: 16px;
+}
+
+.blog-carousel .slick-slide > div {
+  height: 100%;
+}
+
+.blog-carousel .slick-dots {
+  bottom: -40px;
+}
+
+.blog-carousel .slick-dots li button:before {
+  color: hsl(var(--accent));
+  opacity: 0.5;
+}
+
+.blog-carousel .slick-dots li.slick-active button:before {
+  color: hsl(var(--accent));
+  opacity: 1;
+}
+
+.blog-carousel .slick-prev,
+.blog-carousel .slick-next {
+  width: 40px;
+  height: 40px;
+}
+
+.blog-carousel .slick-prev {
+  left: -50px;
+}
+
+.blog-carousel .slick-next {
+  right: -50px;
+}
+
+.blog-carousel .slick-prev:before,
+.blog-carousel .slick-next:before {
+  color: hsl(var(--accent));
+  font-size: 40px;
+}
+
 @media (max-width: 640px) {
   .project-carousel .slick-prev,
-  .project-carousel .slick-next {
+  .project-carousel .slick-next,
+  .blog-carousel .slick-prev,
+  .blog-carousel .slick-next {
     display: none !important;
   }
-} 
+}

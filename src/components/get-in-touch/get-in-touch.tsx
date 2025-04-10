@@ -62,7 +62,7 @@ export default function GetInTouch() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="hover:shadow-3xl mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-12 rounded-3xl bg-gradient-to-br from-accent via-accent/90 to-accent/80 px-8 py-12 text-white shadow-2xl backdrop-blur-sm transition-all duration-300 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700/50 lg:mt-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-16"
+        className="hover:shadow-3xl mx-auto grid max-w-7xl grid-cols-1 gap-12 rounded-3xl bg-gradient-to-br from-accent via-accent/90 to-accent/80 px-8 py-12 text-white shadow-2xl backdrop-blur-sm transition-all duration-300 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700/50 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-16"
       >
         <div className="space-y-8 ">
           <motion.h2
