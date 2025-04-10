@@ -19,11 +19,6 @@
       "@/public/*": ["./public/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/data/siteMetaData.mjs"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/data/metadata.mjs"],
   "exclude": ["node_modules"]
 }

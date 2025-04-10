@@ -7,7 +7,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { type NavbarProps } from "@/layout/navbar";
 import ThemeSwitch from "@/components/utility/theme-switch";
 import { classNames } from "@/utility/classNames";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export interface MobileMenuProps extends NavbarProps {
   openMenu: boolean;
@@ -68,7 +68,7 @@ export default function MobileMenu({
                 <ThemeSwitch setClose={setOpenMenu} />
               </div>
               <div className="absolute bottom-0 py-6">
-                ©{new Date().getFullYear()} {siteMetadata.author}
+                ©{new Date().getFullYear()} {metadata.name}
               </div>
             </Dialog.Panel>
           </Transition.Child>

@@ -7,7 +7,7 @@ import PageTransitionAnimation from "@/components/page-transition-animation";
 import BlogCard from "@/components/blogs/blog-card";
 import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { BLOG_DATA } from "@/data/blogs";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function Blogs() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -40,21 +40,21 @@ export default function Blogs() {
   return (
     <>
       <NextSeo
-        title={`Blogs by ${siteMetadata.author} | Software Engineer`}
-        description={`Read insights, tutorials, and thoughts on software development, web technologies, and engineering best practices from ${siteMetadata.author}.`}
-        canonical={`${siteMetadata.siteUrl}/blogs`}
+        title={`Blogs by ${metadata.name} | Software Engineer`}
+        description={`Read insights, tutorials, and thoughts on software development, web technologies, and engineering best practices from ${metadata.name}.`}
+        canonical={`${metadata.portfolioUrl}/blogs`}
         openGraph={{
-          url: `${siteMetadata.siteUrl}/blogs`,
-          title: `Blogs by ${siteMetadata.author} - Software Engineer`,
+          url: `${metadata.portfolioUrl}/blogs`,
+          title: `Blogs by ${metadata.name} - Software Engineer`,
           description:
             "Explore articles and insights about software development, web technologies, and engineering best practices.",
           images: [
             {
-              url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: `${siteMetadata.author} - Portfolio Image`,
+              url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
+              alt: `${metadata.name} - Portfolio Image`,
             },
           ],
-          siteName: siteMetadata.siteName,
+          siteName: metadata.portfolioName,
           type: "website",
         }}
         twitter={{
@@ -152,7 +152,7 @@ export default function Blogs() {
               <p className="mt-6 text-base text-muted-foreground sm:text-lg">
                 Follow me on{" "}
                 <Link
-                  href={siteMetadata.github}
+                  href={metadata.github}
                   target="_blank"
                   className="font-semibold text-accent underline underline-offset-4 transition-colors hover:text-accent/70"
                 >

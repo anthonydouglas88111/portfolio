@@ -11,7 +11,7 @@ import ContactForm, {
 import ContactMailToast, {
   type MailSentToastState,
 } from "@/components/contact-form/contact-mail-toast";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function GetInTouch() {
   const [isSendingMail, setIsSendingMail] = useState(false);
@@ -30,9 +30,9 @@ export default function GetInTouch() {
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID as string,
         {
           from_name: values.name,
-          to_name: siteMetadata.author,
+          to_name: metadata.name,
           from_email: values.email,
-          to_email: siteMetadata.email,
+          to_email: metadata.email,
           subject: values.subject,
           message: values.message,
         },
@@ -101,10 +101,10 @@ export default function GetInTouch() {
                 <MailIcon className="h-5 w-5 text-accent/90" />
               </div>
               <Link
-                href={`mailto:${siteMetadata.email}`}
+                href={`mailto:${metadata.email}`}
                 className="text-lg text-white/90 transition-colors hover:text-white"
               >
-                {siteMetadata.email}
+                {metadata.email}
               </Link>
             </motion.div>
             <motion.div
@@ -115,10 +115,10 @@ export default function GetInTouch() {
                 <PhoneIcon className="h-5 w-5 text-accent/90" />
               </div>
               <Link
-                href={`tel:${siteMetadata.phone.replace(/\D/g, "")}`}
+                href={`tel:${metadata.phone?.replace(/\D/g, "")}`}
                 className="text-lg text-white/90 transition-colors hover:text-white"
               >
-                {siteMetadata.phone}
+                {metadata.phone}
               </Link>
             </motion.div>
             <motion.div
@@ -129,7 +129,7 @@ export default function GetInTouch() {
                 <LocationIcon className="h-5 w-5 text-accent/90" />
               </div>
               <span className="text-lg text-white/90">
-                {siteMetadata.city}, {siteMetadata.country}
+                {metadata.city}, {metadata.provinceCode}, {metadata.country}
               </span>
             </motion.div>
           </motion.div>

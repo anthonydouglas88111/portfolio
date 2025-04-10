@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import { globby } from "globby";
 import prettier from "prettier";
-import { siteMetadata } from "../data/siteMetaData.mjs";
+import { metadata } from "../data/metadata.mjs";
 
 async function generateSitemap() {
   const prettierConfig = await prettier.resolveConfig(
@@ -31,7 +31,7 @@ async function generateSitemap() {
                 }
 
                 return `<url>
-                            <loc>${siteMetadata.siteUrl}${path}</loc>
+                            <loc>${metadata.portfolioUrl}${path}</loc>
                         </url>
                     `;
               })
@@ -54,6 +54,6 @@ async function generateSitemap() {
 
 const robotsTxt = `User-agent: *
 Allow: /
-Sitemap: ${siteMetadata.siteUrl}/sitemap.xml`;
+Sitemap: ${metadata.portfolioUrl}/sitemap.xml`;
 
 generateSitemap();

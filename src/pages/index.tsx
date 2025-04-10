@@ -10,26 +10,26 @@ import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { SKILL_SHOWCASE } from "@/data/skills";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { BLOG_DATA } from "@/data/blogs";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function Home() {
   return (
     <>
       <NextSeo
-        title={`${siteMetadata.author} | Software Engineer`}
-        description={`Explore the professional portfolio of ${siteMetadata.author}, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences.`}
-        canonical={siteMetadata.siteUrl}
+        title={`${metadata.name} | Software Engineer`}
+        description={`Explore the professional portfolio of ${metadata.name}, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences.`}
+        canonical={metadata.portfolioUrl}
         openGraph={{
-          url: siteMetadata.siteUrl,
-          title: `${siteMetadata.author} | Software Engineer`,
-          description: `Dive into the world of web development with ${siteMetadata.author}. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
+          url: metadata.portfolioUrl,
+          title: `${metadata.name} | Software Engineer`,
+          description: `Dive into the world of web development with ${metadata.name}. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
           images: [
             {
-              url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: `${siteMetadata.author} - Portfolio Image`,
+              url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
+              alt: `${metadata.name} - Portfolio Image`,
             },
           ],
-          siteName: siteMetadata.siteName,
+          siteName: metadata.portfolioName,
           type: "website",
         }}
         twitter={{

@@ -1,6 +1,6 @@
 import { type ProjectShowcaseListItemProps } from "@/components/projects/project-showcase";
 import { type ProjectCardProps } from "@/components/projects/project-card";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItemProps[] = [
   {
@@ -108,7 +108,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/portfolioLight.webp",
     ],
     sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
-    liveWebsiteHref: siteMetadata.siteUrl,
+    liveWebsiteHref: metadata.portfolioUrl,
   },
   {
     id: "5",

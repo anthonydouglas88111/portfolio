@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 import profileImg from "@/public/assets/images/profile.png";
 import DuotoneImage from "./duotone-image";
 
@@ -126,7 +126,7 @@ export default function AboutHero() {
         <FadeUp key="hero-content" duration={0.6}>
           <div className="relative">
             <h1 className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text py-1 text-5xl font-bold text-transparent sm:text-6xl md:text-6xl lg:text-5xl xl:text-7xl">
-              {siteMetadata.author}
+              {metadata.name}
             </h1>
             <motion.div
               initial={{ width: 0 }}
@@ -198,15 +198,15 @@ export default function AboutHero() {
               >
                 <Image
                   className="h-8 w-8"
-                  alt={siteMetadata.country}
-                  src={`https://flagcdn.com/${siteMetadata.short}.svg`}
+                  alt={metadata.country}
+                  src={`https://flagcdn.com/${metadata.countryCode}.svg`}
                   width={32}
                   height={32}
                 />
               </motion.div>
             </div>
             <span className="text-lg font-medium text-foreground">
-              {siteMetadata.city}, {siteMetadata.country}
+              {metadata.city}, {metadata.provinceCode}, {metadata.country}
             </span>
           </motion.div>
         </FadeUp>

@@ -130,14 +130,17 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                           <GithubIcon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                         </Link>
                       )}
-                      <Link
-                        href={project.liveWebsiteHref!}
-                        target="_blank"
-                        className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
-                      >
-                        <span>Live</span>
-                        <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
-                      </Link>
+                      {project.liveWebsiteHref && (
+                        <Link
+                          href={project.liveWebsiteHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
+                        >
+                          <span>Live</span>
+                          <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import { BookOpen, Clock, Calendar } from "lucide-react";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
 import { BLOG_DATA } from "@/data/blogs";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function BlogPost() {
   const router = useRouter();
@@ -37,11 +37,11 @@ export default function BlogPost() {
   return (
     <>
       <NextSeo
-        title={`${post.title} - ${siteMetadata.author} Blogs`}
+        title={`${post.title} - ${metadata.name} Blogs`}
         description={post.description}
-        canonical={`${siteMetadata.siteUrl}/blogs/${post.slug}`}
+        canonical={`${metadata.portfolioUrl}/blogs/${post.slug}`}
         openGraph={{
-          url: `${siteMetadata.siteUrl}/blogs/${post.slug}`,
+          url: `${metadata.portfolioUrl}/blogs/${post.slug}`,
           title: post.title,
           description: post.description,
           images: post.image
@@ -53,15 +53,15 @@ export default function BlogPost() {
               ]
             : [
                 {
-                  url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-                  alt: `${siteMetadata.author} - Portfolio Image`,
+                  url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
+                  alt: `${metadata.name} - Portfolio Image`,
                 },
               ],
-          siteName: siteMetadata.siteName,
+          siteName: metadata.portfolioName,
           type: "article",
           article: {
             publishedTime: post.date,
-            authors: [siteMetadata.siteUrl],
+            authors: [metadata.name],
             tags: post.tags,
           },
         }}
@@ -175,13 +175,13 @@ export default function BlogPost() {
                   About the Author
                 </h2>
                 <p className="mt-4 text-muted-foreground">
-                  {siteMetadata.author} is a Software Engineer passionate about
+                  {metadata.name} is a Software Engineer passionate about
                   building scalable web applications and sharing knowledge with
                   the developer community.
                 </p>
                 <div className="mt-4 flex gap-4">
                   <Link
-                    href={siteMetadata.github}
+                    href={metadata.github}
                     target="_blank"
                     className="text-accent hover:text-accent/70"
                   >

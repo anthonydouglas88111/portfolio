@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FiDownload, FiGithub, FiUser } from "react-icons/fi";
 
 import FadeUp from "@/animation/fade-up";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function LandingHero() {
   const [scrollY, setScrollY] = useState(0);
@@ -42,14 +42,14 @@ export default function LandingHero() {
             <FadeUp key="title-main" duration={0.6}>
               <div className="space-y-4">
                 <h1 className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text py-2 text-5xl font-bold text-transparent sm:text-6xl md:text-7xl xl:text-8xl">
-                  {siteMetadata.author}
+                  {metadata.name}
                 </h1>
               </div>
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
-                {siteMetadata.description} specializing in building
-                high-performance, user-focused web applications. Skilled in{" "}
+                Software Engineer specializing in building high-performance,
+                user-focused web applications. Skilled in{" "}
                 <span className="relative">
                   <span className="relative z-10 font-semibold text-accent">
                     React.js
@@ -104,7 +104,7 @@ export default function LandingHero() {
                   Download Resume
                 </Link>
                 <Link
-                  href={siteMetadata.github}
+                  href={metadata.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-accent/20 bg-white/5 px-6 py-3 text-base font-semibold text-accent transition-all hover:scale-105 hover:bg-accent/10 dark:border-accent/20 dark:bg-zinc-900/50"

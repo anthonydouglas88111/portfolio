@@ -1,0 +1,16 @@
+export const metadata = {
+  name: process.env.NEXT_PUBLIC_USER_NAME || "",
+  email: process.env.NEXT_PUBLIC_USER_EMAIL || "",
+  jobTitle: process.env.NEXT_PUBLIC_USER_JOB_TITLE || "",
+  country: process.env.NEXT_PUBLIC_USER_COUNTRY || "",
+  countryCode: process.env.NEXT_PUBLIC_USER_COUNTRY_CODE || "",
+  province: process.env.NEXT_PUBLIC_USER_PROVINCE || "",
+  provinceCode: process.env.NEXT_PUBLIC_USER_PROVINCE_CODE || "",
+  city: process.env.NEXT_PUBLIC_USER_CITY || "",
+  phone: process.env.NEXT_PUBLIC_USER_PHONE || "",
+  github: process.env.NEXT_PUBLIC_USER_GITHUB || "",
+  portfolioName: process.env.NEXT_PUBLIC_PORTFOLIO_NAME || "",
+  portfolioUrl: process.env.NEXT_PUBLIC_PORTFOLIO_URL || "",
+  portfolioRepo: process.env.NEXT_PUBLIC_PORTFOLIO_REPO || "",
+  portfolioImage: process.env.NEXT_PUBLIC_PORTFOLIO_IMAGE || "",
+};

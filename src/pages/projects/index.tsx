@@ -7,7 +7,7 @@ import PageTransitionAnimation from "@/components/page-transition-animation";
 import ProjectCard from "@/components/projects/project-card";
 import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { PROJECT_DATA } from "@/data/projects";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function Projects() {
   const categories = ["all", "web", "mobile"];
@@ -21,20 +21,20 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title={`Projects by ${siteMetadata.author} - Software Engineer Portfolio`}
-        description={`Explore a collection of projects by ${siteMetadata.author}, a seasoned Software Engineer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work.`}
-        canonical={`${siteMetadata.siteUrl}/projects`}
+        title={`Projects by ${metadata.name} - Software Engineer Portfolio`}
+        description={`Explore a collection of projects by ${metadata.name}, a seasoned Software Engineer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work.`}
+        canonical={`${metadata.portfolioUrl}/projects`}
         openGraph={{
-          url: `${siteMetadata.siteUrl}/projects`,
-          title: `Discover Projects by ${siteMetadata.author} - Software Engineer`,
-          description: `Explore a showcase of projects crafted by ${siteMetadata.author}, a Software Engineer. Witness the fusion of creativity and technology in web development.`,
+          url: `${metadata.portfolioUrl}/projects`,
+          title: `Discover Projects by ${metadata.name} - Software Engineer`,
+          description: `Explore a showcase of projects crafted by ${metadata.name}, a Software Engineer. Witness the fusion of creativity and technology in web development.`,
           images: [
             {
-              url: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-              alt: `${siteMetadata.author} - Portfolio Image`,
+              url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
+              alt: `${metadata.name} - Portfolio Image`,
             },
           ],
-          siteName: siteMetadata.siteName,
+          siteName: metadata.portfolioName,
           type: "website",
         }}
         twitter={{
@@ -109,7 +109,7 @@ export default function Projects() {
               <p className="mt-6 text-base text-muted-foreground sm:text-lg">
                 Visit my{" "}
                 <Link
-                  href={`${siteMetadata.github}?tab=repositories`}
+                  href={`${metadata.github}?tab=repositories`}
                   target="_blank"
                   className="font-semibold text-accent underline underline-offset-4 transition-colors hover:text-accent/70"
                 >

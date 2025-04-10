@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import ScrollUpButton from "@/components/scroll-up-button";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { metadata } from "@/data/metadata.mjs";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,10 +19,7 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-3 sm:flex-row">
             <span className="text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
               © {currentYear}{" "}
-              <span className="font-bold text-accent">
-                {siteMetadata.author}
-              </span>
-              .{" "}
+              <span className="font-bold text-accent">{metadata.name}</span>.{" "}
             </span>
             <span className="text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
               All rights reserved.
@@ -32,7 +29,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <span className="text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
               Designed & Built with <span className="text-accent">❤️</span> by
-              Anthony Douglas
+              {metadata.name}
             </span>
           </div>
         </motion.div>
