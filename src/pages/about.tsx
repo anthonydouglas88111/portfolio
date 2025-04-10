@@ -1,9 +1,10 @@
 import { NextSeo } from "next-seo";
 import { AnimatePresence } from "framer-motion";
 
+import PageTransitionAnimation from "@/components/page-transition-animation";
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import PageTransitionAnimation from "@/components/page-transition-animation";
+import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
@@ -42,8 +43,17 @@ export default function About() {
       <AnimatePresence>
         <PageTransitionAnimation key="page-transition" />
         <AboutHero key="about-hero" />
-        <ExperienceShowcaseList key="experience" title="Experience" details={EXPERIENCE} />
-        <ExperienceShowcaseList key="education" title="Education" details={EDUCATION} />
+        <ExperienceShowcaseList
+          key="experience"
+          title="Experience"
+          details={EXPERIENCE}
+        />
+        <ExperienceShowcaseList
+          key="education"
+          title="Education"
+          details={EDUCATION}
+        />
+        <GetInTouch key="get-in-touch" />
       </AnimatePresence>
     </>
   );

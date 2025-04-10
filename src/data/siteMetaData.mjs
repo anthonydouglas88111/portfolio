@@ -17,4 +17,5 @@ export const siteMetadata = {
   country: "Canada",
   city: "Toronto",
   short: "ca",
+  phone: "+1 (416) 555-1234",
 };

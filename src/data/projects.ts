@@ -58,6 +58,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "Visualize JSON data format in form of a tree or graph. Application is made using Nextjs, Tailwindcss and Monaco Editor. Design image can be downloaded from this app.",
     sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
     liveWebsiteHref: "https://jsontree.vercel.app",
+    category: "web",
+    skills: ["Next.js", "Tailwind CSS", "Monaco Editor", "TypeScript"],
   },
   {
     name: "Kanban app",
@@ -71,6 +73,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "Keep track of projects and tasks in different categories. Drag and drop card from tables. Assign user and priority to task and many more features. This app is made using Reactjs, Typescript, Tailwindcss and React-beautiful-dnd library.",
     sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
     liveWebsiteHref: "https://kannban-board.vercel.app",
+    category: "web",
+    skills: ["React", "TypeScript", "Tailwind CSS", "React DnD", "Zustand"],
   },
   {
     name: "Many Games",
@@ -86,6 +90,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "Many short and fun games using Reactjs, Typescript and Tailwindcss with collaboration with other developers",
     sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
     liveWebsiteHref: "https://manygames.vercel.app",
+    category: "web",
+    skills: ["React", "TypeScript", "Tailwind CSS", "Redux", "React Router"],
   },
   {
     name: "My portfolio",
@@ -98,6 +104,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
     sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
     liveWebsiteHref: siteMetadata.siteUrl,
+    category: "web",
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
   {
     name: "Covid Tracker",
@@ -111,6 +119,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "Get latest covid related stats in a table where user can filter using country and cases. It also has a map which show every countries data for quick view. It uses an open source api (disease.sh). Made using Reactjs, Javascript and MUI",
     sourceCodeHref: "https://github.com/BUMBAIYA/CovidTracker",
     liveWebsiteHref: "https://bumbaiya.github.io/CovidTracker",
+    category: "web",
+    skills: ["React", "JavaScript", "Material UI", "Chart.js", "REST APIs"],
   },
   {
     name: "Stock predictor",
@@ -124,5 +134,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     description:
       "Get prediction of opening and closing price of stocks price. Frontend is made using Reactjs and backend is made using Flask and Machine learning model are trained using Tensorflow",
     sourceCodeHref: "https://github.com/Rohrschachh/Stock-Market-Predictor",
+    category: "web",
+    skills: [
+      "React",
+      "Python",
+      "Flask",
+      "TensorFlow",
+      "Machine Learning",
+      "Chart.js",
+    ],
   },
 ];

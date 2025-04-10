@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { BookOpen, Clock, Calendar } from "lucide-react";
 
 export interface BlogCardProps {
   id: string;
@@ -41,32 +42,40 @@ export default function BlogCard(props: BlogCardProps) {
             />
           </div>
           <div className="flex flex-1 flex-col gap-2 p-6">
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>{props.category}</span>
-              <span>•</span>
-              <span>{props.readTime}</span>
+            <div className="flex items-center justify-between gap-4 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1">
+                <BookOpen className="h-4 w-4" />
+                {props.category}
+              </span>
+              <span className="flex items-center gap-1">
+                <Clock className="h-4 w-4" />
+                {props.readTime}
+              </span>
             </div>
             <h2 className="text-xl font-semibold text-foreground transition-colors group-hover:text-accent">
               {props.title}
             </h2>
             <p className="text-muted-foreground">{props.description}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {props.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="rounded-full bg-accent/10 px-3 py-1 text-xs text-accent"
-                >
-                  {tag}
-                </span>
-              ))}
+            <div className="mt-auto space-y-4">
+              <div className="flex flex-wrap gap-2">
+                {props.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="rounded-full bg-accent/10 px-3 py-1 text-xs text-accent"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <time className="flex items-center justify-end gap-1 text-sm text-muted-foreground">
+                <Calendar className="h-4 w-4" />
+                {new Date(props.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </time>
             </div>
-            <time className="mt-4 text-sm text-muted-foreground">
-              {new Date(props.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
           </div>
         </article>
       </Link>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
 import BlogCard from "@/components/blogs/blog-card";
@@ -69,65 +69,97 @@ export default function Blogs() {
       />
       <AnimatePresence>
         <PageTransitionAnimation key="page-transition" />
-        <section className="mx-auto mt-6 w-full gap-20 px-6 pb-16 sm:mt-12 sm:px-14 md:px-20">
+        <section className="mx-auto w-full px-4 py-8 sm:px-6 sm:py-12 md:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl">
-            <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
-              Blogs
-            </h1>
-            <div className="my-2">
-              <span className="text-sm text-muted-foreground">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+                Blogs
+              </h1>
+              <p className="mt-3 text-base text-muted-foreground sm:text-lg">
                 Thoughts, tutorials, and insights about software development
-              </span>
-            </div>
+              </p>
+            </motion.div>
 
-            <div className="mt-8 flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => handleCategoryClick(category)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                    (category === "all" && selectedCategories.length === 0) ||
-                    (category !== "all" &&
-                      selectedCategories.includes(category))
-                      ? "bg-accent text-white"
-                      : "bg-accent/10 text-accent hover:bg-accent/20"
-                  }`}
-                >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
-              ))}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-8 overflow-x-auto pb-2"
+            >
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryClick(category)}
+                    className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                      (category === "all" && selectedCategories.length === 0) ||
+                      (category !== "all" &&
+                        selectedCategories.includes(category))
+                        ? "bg-accent text-white shadow-md shadow-accent/20"
+                        : "bg-accent/10 text-accent hover:bg-accent/20 hover:shadow-sm"
+                    }`}
+                  >
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
 
-            <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2"
+            >
               {filteredPosts.map((post) => (
                 <BlogCard key={post.id} {...post} />
               ))}
-            </div>
+            </motion.div>
 
             {filteredPosts.length === 0 && (
-              <div className="mt-8 text-center">
-                <p className="text-muted-foreground">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="mt-16 flex flex-col items-center justify-center rounded-lg border border-dashed border-muted-foreground/20 p-8 text-center"
+              >
+                <p className="text-lg font-medium text-muted-foreground">
                   No posts found in the selected categories.
                 </p>
-              </div>
+                <button
+                  onClick={() => setSelectedCategories([])}
+                  className="mt-4 rounded-full bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
+                >
+                  Clear filters
+                </button>
+              </motion.div>
             )}
 
-            <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
-              <span className="text-xl font-bold md:text-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mx-auto mt-20 max-w-3xl rounded-2xl bg-accent/5 p-8 text-center sm:p-12"
+            >
+              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
                 Interested in staying updated with my latest articles?
-              </span>
-              <p className="mt-10 text-base md:text-xl">
+              </h2>
+              <p className="mt-6 text-base text-muted-foreground sm:text-lg">
                 Follow me on{" "}
                 <Link
                   href={siteMetadata.github}
                   target="_blank"
-                  className="font-semibold text-accent underline underline-offset-2 hover:text-accent/70"
+                  className="font-semibold text-accent underline underline-offset-4 transition-colors hover:text-accent/70"
                 >
                   Github
                 </Link>{" "}
                 to get notified when new posts are published.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
       </AnimatePresence>

@@ -45,12 +45,15 @@ export default function Carousel({ aspectRatio = 1, images }: CarouselProps) {
   };
 
   return (
-    <div className="relative w-full overflow-hidden" style={{ aspectRatio }}>
+    <div
+      className="relative h-full w-full overflow-hidden"
+      style={{ aspectRatio }}
+    >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={page}
           loading="lazy"
-          className="h-full w-full bg-cover"
+          className="h-full w-full object-cover"
           style={{ aspectRatio }}
           src={images[imageIndex]}
           custom={direction}

@@ -42,7 +42,8 @@ export default function PageNotFound() {
               Oops! Page Not Found
             </h2>
             <p className="mt-4 text-muted-foreground">
-              The page you're looking for doesn't exist or has been moved.
+              The page you&apos;re looking for doesn&apos;t exist or has been
+              moved.
             </p>
           </motion.div>
 

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function PageTransitionAnimation() {
   return (
-    <>
+    <div className="z-50">
       <motion.div
         className="fixed bottom-0 right-full top-0 z-50 flex h-full w-screen items-center justify-center bg-accent"
         initial={{ x: "100%", width: "100%" }}
@@ -40,6 +40,6 @@ export default function PageTransitionAnimation() {
           </svg>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }
