@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { FormikProps } from "formik";
 
 import { MailIcon, PhoneIcon, LocationIcon } from "@/components/icons";
 import ContactForm, {
@@ -18,31 +20,31 @@ export default function GetInTouch() {
     value: false,
     message: "",
   });
+  const formRef = useRef<FormikProps<ContactFormValues>>(null);
 
   const handleSubmit = async (values: ContactFormValues) => {
     setIsSendingMail(true);
     try {
-      const response = await fetch("/api/sendmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID as string,
+        {
+          from_name: values.name,
+          to_name: siteMetadata.author,
+          from_email: values.email,
+          to_email: siteMetadata.email,
+          subject: values.subject,
+          message: values.message,
+        },
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY as string,
+      );
+
+      setToastState({
+        type: "success",
+        value: true,
+        message: "Successfully sent email",
       });
-      if (response.ok) {
-        setToastState({
-          type: "success",
-          value: true,
-          message: "Successfully sent email",
-        });
-      } else {
-        setToastState({
-          type: response.status === 429 ? "warning" : "failure",
-          value: true,
-          message:
-            response.status === 429
-              ? "Rate Limiter: Only 5 email per hour"
-              : "Oop! Unable to send email",
-        });
-      }
+      formRef.current?.resetForm();
     } catch {
       setToastState({
         type: "failure",
@@ -59,7 +61,7 @@ export default function GetInTouch() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="hover:shadow-3xl mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-12 rounded-3xl bg-gradient-to-br from-accent via-accent/90 to-accent/80 px-8 py-12 text-white shadow-2xl backdrop-blur-sm transition-all duration-300 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700/50 lg:mt-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-16"
+      className="hover:shadow-3xl mx-6 mt-12 grid max-w-7xl grid-cols-1 gap-12 rounded-3xl bg-gradient-to-br from-accent via-accent/90 to-accent/80 px-8 py-12 text-white shadow-2xl backdrop-blur-sm transition-all duration-300 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700/50 sm:mx-14 lg:mt-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-16"
     >
       <div className="space-y-8 ">
         <motion.h2
@@ -123,7 +125,11 @@ export default function GetInTouch() {
         </motion.div>
       </div>
 
-      <ContactForm isSubmitting={isSendingMail} handleSubmit={handleSubmit} />
+      <ContactForm 
+        isSubmitting={isSendingMail} 
+        handleSubmit={handleSubmit} 
+        formRef={formRef}
+      />
       <ContactMailToast toastState={toastState} showToast={setToastState} />
     </motion.div>
   );

@@ -1,6 +1,7 @@
-import { Field, Form, Formik } from "formik";
+import { Field, Form, Formik, FormikProps } from "formik";
 import * as Yup from "yup";
 import { Loader2Icon } from "lucide-react";
+import { RefObject } from "react";
 
 import CustomInput from "@/components/utility/custom-input";
 import CustomTextarea from "@/components/utility/custom-textarea";
@@ -63,17 +64,19 @@ const initialFormValues: ContactFormValues = {
 
 export interface ContactFormProps {
   isSubmitting: boolean;
-  // eslint-disable-next-line
   handleSubmit: (values: ContactFormValues) => Promise<void>;
+  formRef?: RefObject<FormikProps<ContactFormValues>>;
 }
 
 export default function ContactForm({
   isSubmitting,
   handleSubmit,
+  formRef,
 }: ContactFormProps) {
   return (
     <>
       <Formik
+        innerRef={formRef}
         initialValues={initialFormValues}
         validationSchema={mailValidationSchema}
         onSubmit={handleSubmit}
