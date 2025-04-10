@@ -3,8 +3,9 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
-import ProjectCard from "@/components/projects/project-card";
 import PageTransitionAnimation from "@/components/page-transition-animation";
+import ProjectCard from "@/components/projects/project-card";
+import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { PROJECT_DATA } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
@@ -120,6 +121,7 @@ export default function Projects() {
             </motion.div>
           </div>
         </section>
+        <GetInTouch key="get-in-touch" />
       </AnimatePresence>
     </>
   );

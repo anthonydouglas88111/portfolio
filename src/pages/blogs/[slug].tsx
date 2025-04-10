@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
+import { BookOpen, Clock, Calendar } from "lucide-react";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
 import { BLOG_DATA } from "@/data/blogs";
@@ -102,10 +103,25 @@ export default function BlogPost() {
 
             <div className="mx-auto max-w-3xl">
               <header className="mb-8">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span>{post.category}</span>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
+                <div className="flex flex-col justify-between gap-4 text-sm text-muted-foreground sm:flex-row">
+                  <div className="flex flex-col gap-4 sm:flex-row">
+                    <span className="flex items-center gap-1">
+                      <BookOpen className="h-4 w-4" />
+                      {post.category}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      {post.readTime}
+                    </span>
+                  </div>
+                  <time className="flex items-center gap-1 text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4" />
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
                 </div>
                 <h1 className="mt-4 text-3xl font-bold text-foreground md:text-4xl">
                   {post.title}
@@ -123,13 +139,6 @@ export default function BlogPost() {
                     </span>
                   ))}
                 </div>
-                <time className="mt-4 block text-sm text-muted-foreground">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
               </header>
 
               {post.image && (
@@ -147,7 +156,7 @@ export default function BlogPost() {
 
               <div className="prose prose-lg max-w-none dark:prose-invert">
                 {post.content === "Coming soon..." ? (
-                  <div className="bg-card rounded-lg p-6 text-center">
+                  <div className="rounded-lg bg-background p-6 text-center">
                     <h2 className="text-xl font-semibold text-foreground">
                       Content Coming Soon
                     </h2>

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
 import BlogCard from "@/components/blogs/blog-card";
+import GetInTouch from "@/components/get-in-touch/get-in-touch";
 import { BLOG_DATA } from "@/data/blogs";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
@@ -88,7 +89,7 @@ export default function Blogs() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-8 overflow-x-auto pb-2"
+              className="mt-8 overflow-x-auto bg-background pb-2"
             >
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
@@ -113,7 +114,7 @@ export default function Blogs() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2"
+              className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
             >
               {filteredPosts.map((post) => (
                 <BlogCard key={post.id} {...post} />
@@ -125,7 +126,7 @@ export default function Blogs() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="mt-16 flex flex-col items-center justify-center rounded-lg border border-dashed border-muted-foreground/20 p-8 text-center"
+                className="mt-16 flex flex-col items-center justify-center rounded-lg border border-dashed border-muted-foreground/20 bg-background p-8 text-center"
               >
                 <p className="text-lg font-medium text-muted-foreground">
                   No posts found in the selected categories.
@@ -162,6 +163,7 @@ export default function Blogs() {
             </motion.div>
           </div>
         </section>
+        <GetInTouch key="get-in-touch" />
       </AnimatePresence>
     </>
   );
