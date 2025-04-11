@@ -37,7 +37,7 @@ export default function BlogPost() {
   return (
     <>
       <NextSeo
-        title={`${post.title} - ${metadata.name} Blogs`}
+        title={`${post.title} | ${metadata.name} Blogs`}
         description={post.description}
         canonical={`${metadata.portfolioUrl}/blogs/${post.slug}`}
         openGraph={{
@@ -118,7 +118,7 @@ export default function BlogPost() {
                     <Calendar className="h-4 w-4" />
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",
-                      month: "long",
+                      month: "short",
                       day: "numeric",
                     })}
                   </time>
