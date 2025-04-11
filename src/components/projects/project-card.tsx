@@ -14,7 +14,7 @@ export interface ProjectCardProps {
   description: string;
   favicon: string;
   images: string[];
-  sourceCodeHref: string;
+  sourceCodeHref?: string;
   liveWebsiteHref?: string;
 }
 
@@ -60,13 +60,15 @@ export default function ProjectCard(props: ProjectCardProps) {
               ))}
             </div>
             <div className="mt-4 flex items-center justify-end gap-6">
-              <Link
-                href={props.sourceCodeHref}
-                target="_blank"
-                className="flex items-center gap-1 text-xs underline md:text-sm"
-              >
-                <GithubIcon className="h-5 w-5" /> Source code
-              </Link>
+              {props.sourceCodeHref && (
+                <Link
+                  href={props.sourceCodeHref}
+                  target="_blank"
+                  className="flex items-center gap-1 text-xs underline md:text-sm"
+                >
+                  <GithubIcon className="h-5 w-5" /> Source code
+                </Link>
+              )}
               {props.liveWebsiteHref && (
                 <Link
                   href={props.liveWebsiteHref}

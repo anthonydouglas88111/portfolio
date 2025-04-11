@@ -11,7 +11,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItemProps[] = [
       LIGHT: "/assets/images/projects/jsontreeLight.webp",
       DARK: "/assets/images/projects/jsontreeDark.webp",
     },
-    sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
     liveWebsiteHref: "https://jsontree.vercel.app",
   },
   {
@@ -22,7 +22,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItemProps[] = [
       LIGHT: "/assets/images/projects/manyGamesLight.webp",
       DARK: "/assets/images/projects/manyGamesDark.webp",
     },
-    sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
     liveWebsiteHref: "https://manygames.vercel.app",
   },
   {
@@ -40,7 +40,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItemProps[] = [
       LIGHT: "/assets/images/projects/kanbanLight.webp",
       DARK: "/assets/images/projects/kanbanDark.webp",
     },
-    sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
     liveWebsiteHref: "https://kannban-board.vercel.app",
   },
 ];
@@ -58,7 +58,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/jsontreeLight.webp",
       "/assets/images/projects/jsontreeDark.webp",
     ],
-    sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
     liveWebsiteHref: "https://jsontree.vercel.app",
   },
   {
@@ -74,7 +74,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/kanbanDark.webp",
       "/assets/images/projects/kanbanCardLight.webp",
     ],
-    sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
     liveWebsiteHref: "https://kannban-board.vercel.app",
   },
   {
@@ -92,7 +92,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/manyGamesPuzzle.webp",
       "/assets/images/projects/manyGamesWordle.webp",
     ],
-    sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
     liveWebsiteHref: "https://manygames.vercel.app",
   },
   {
@@ -107,7 +107,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/portfolioDark.webp",
       "/assets/images/projects/portfolioLight.webp",
     ],
-    sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
     liveWebsiteHref: metadata.portfolioUrl,
   },
   {
@@ -123,7 +123,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/covidTrackerMap.webp",
       "/assets/images/projects/covidTrackerTable.webp",
     ],
-    sourceCodeHref: "https://github.com/BUMBAIYA/CovidTracker",
+    // sourceCodeHref: "https://github.com/BUMBAIYA/CovidTracker",
     liveWebsiteHref: "https://bumbaiya.github.io/CovidTracker",
   },
   {
@@ -147,6 +147,6 @@ export const PROJECT_DATA: ProjectCardProps[] = [
       "/assets/images/projects/stockPredictorCompareChart.webp",
       "/assets/images/projects/stockPredictorLineChart.webp",
     ],
-    sourceCodeHref: "https://github.com/Rohrschachh/Stock-Market-Predictor",
+    // sourceCodeHref: "https://github.com/Rohrschachh/Stock-Market-Predictor",
   },
 ];
