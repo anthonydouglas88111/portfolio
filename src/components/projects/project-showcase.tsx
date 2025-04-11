@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { ArrowRightIcon, ExternalLinkIcon } from "lucide-react";
 
-import { ArrowTopRight, GithubIcon } from "@/components/icons";
+import { GithubIcon } from "@/components/icons";
 
 export interface ProjectShowcaseListItemProps {
   id: string;
@@ -138,7 +139,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                           className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
                         >
                           <span>Live</span>
-                          <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                          <ExternalLinkIcon className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                         </Link>
                       )}
                     </div>
@@ -161,7 +162,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
             className="group inline-flex items-center gap-4 rounded-full bg-accent/10 px-6 py-3 text-base font-semibold text-accent transition-all hover:bg-accent hover:text-white sm:text-lg md:text-xl"
           >
             <span>View All Projects</span>
-            <ArrowTopRight className="h-5 w-5 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+            <ArrowRightIcon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
           </Link>
         </motion.div>
       </div>

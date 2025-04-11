@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { ArrowRightIcon } from "lucide-react";
 
-import { ArrowTopRight } from "@/components/icons";
 import { BlogCardProps } from "./blog-card";
 
 interface BlogShowcaseProps {
@@ -107,7 +107,7 @@ export default function BlogShowcase({ blogs }: BlogShowcaseProps) {
                             className="group inline-flex items-center gap-2 text-accent hover:text-accent/80"
                           >
                             <span>Read More</span>
-                            <ArrowTopRight className="h-4 w-4 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                            <ArrowRightIcon className="h-4 w-4 transition-transform duration-300" />
                           </Link>
                         </div>
                       </div>
@@ -131,7 +131,7 @@ export default function BlogShowcase({ blogs }: BlogShowcaseProps) {
             className="group inline-flex items-center gap-4 rounded-full bg-accent/10 px-6 py-3 text-base font-semibold text-accent transition-all hover:bg-accent hover:text-white sm:text-lg md:text-xl"
           >
             <span>View All Blogs</span>
-            <ArrowTopRight className="h-5 w-5 rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+            <ArrowRightIcon className="h-5 w-5 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>

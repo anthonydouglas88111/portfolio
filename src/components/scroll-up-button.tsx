@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-import { ArrowUpIcon } from "@/components/icons";
+import { ArrowUpIcon } from "lucide-react";
 
 export default function ScrollUpButton() {
   const [isVisible, setIsVisible] = useState(false);

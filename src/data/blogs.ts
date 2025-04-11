@@ -96,9 +96,9 @@ import { ProductList } from '@/components/features/products'
 
 export default function Home() {
   return (
-    <Layout>
-      <ProductList />
-    </Layout>
+    &lt;Layout&gt;
+      &lt;ProductList /&gt;
+    &lt;/Layout&gt;
   )
 }
 
@@ -830,7 +830,7 @@ import Button from './Button';
 
 test('button click handler is called', () => {
   const handleClick = jest.fn();
-  render(<Button onClick={handleClick}>Click me</Button>);
+  render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
   
   fireEvent.click(screen.getByText('Click me'));
   expect(handleClick).toHaveBeenCalledTimes(1);
@@ -840,7 +840,7 @@ test('button click handler is called', () => {
       <h2>Testing Async Operations</h2>
       <pre><code>
 test('loads and displays data', async () => {
-  render(<DataComponent />);
+  render(&lt;DataComponent /&gt;);
   
   // Wait for data to load
   const data = await screen.findByText('Loaded Data');
@@ -898,11 +898,11 @@ function Counter() {
   const dispatch = useDispatch();
   
   return (
-    <div>
-      <button onClick={() => dispatch(decrement())}>-</button>
-      <span>{count}</span>
-      <button onClick={() => dispatch(increment())}>+</button>
-    </div>
+    &lt;div&gt;
+      &lt;button onClick={() => dispatch(decrement())}&gt;-&lt;/button&gt;
+      &lt;span&gt;{count}&lt;/span&gt;
+      &lt;button onClick={() => dispatch(increment())}&gt;+&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
       </code></pre>
@@ -944,31 +944,30 @@ const fetchUsers = createAsyncThunk(
       
       <h2>HTML Semantics</h2>
       <pre><code>
-<!-- Good semantic HTML -->
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-</nav>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 
-<main>
-  <article>
-    <h1>Article Title</h1>
-    <p>Article content...</p>
-  </article>
-</main>
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Article Title&lt;/h1&gt;
+    &lt;p&gt;Article content...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
       </code></pre>
       
       <h2>ARIA Attributes</h2>
       <pre><code>
-<!-- Button with ARIA label -->
-<button aria-label="Close dialog">×</button>
+{/* Button with ARIA label */}
+&lt;button aria-label="Close dialog"&gt;×&lt;/button&gt;
 
-<!-- Form with ARIA describedby -->
-<label for="username">Username:</label>
-<input id="username" aria-describedby="username-help" type="text">
-<span id="username-help">Enter your username</span>
+{/* Form with ARIA describedby */}
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input id="username" aria-describedby="username-help" type="text"&gt;
+&lt;span id="username-help"&gt;Enter your username&lt;/span&gt;
       </code></pre>
     `,
     image: "/assets/images/blogs/web-accessibility.jpg",
@@ -1116,9 +1115,9 @@ const theme = {
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Button>Click me</Button>
-    </ThemeProvider>
+    &lt;ThemeProvider theme={theme}&gt;
+      &lt;Button&gt;Click me&lt;/Button&gt;
+    &lt;/ThemeProvider&gt;
   );
 }
       </code></pre>
@@ -1150,11 +1149,11 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <div>
-        <h1>My Apollo App</h1>
-      </div>
-    </ApolloProvider>
+    &lt;ApolloProvider client={client}&gt;
+      &lt;div&gt;
+        &lt;h1&gt;My Apollo App&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/ApolloProvider&gt;
   );
 }
       </code></pre>
@@ -1176,15 +1175,15 @@ const GET_USERS = gql\`
 function UserList() {
   const { loading, error, data } = useQuery(GET_USERS);
   
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading) return &lt;p&gt;Loading...&lt;/p&gt;;
+  if (error) return &lt;p&gt;Error: {error.message}&lt;/p&gt;;
   
   return (
-    <ul>
+    &lt;ul&gt;
       {data.users.map(user => (
-        <li key={user.id}>{user.name}</li>
+        &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
       ))}
-    </ul>
+    &lt;/ul&gt;
   );
 }
       </code></pre>
@@ -1217,11 +1216,11 @@ function AddUserForm() {
   };
   
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="name" placeholder="Name" />
-      <input name="email" placeholder="Email" />
-      <button type="submit">Add User</button>
-    </form>
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input name="name" placeholder="Name" /&gt;
+      &lt;input name="email" placeholder="Email" /&gt;
+      &lt;button type="submit"&gt;Add User&lt;/button&gt;
+    &lt;/form&gt;
   );
 }
       </code></pre>
@@ -1320,7 +1319,7 @@ app.listen(port, () => {
 // Using a library like DOMPurify
 import DOMPurify from 'dompurify';
 
-const userInput = '<script>alert("XSS")</script>';
+const userInput = '&lt;script&gt;alert("XSS")&lt;/script&gt;';
 const sanitizedInput = DOMPurify.sanitize(userInput);
       </code></pre>
       
@@ -1455,11 +1454,11 @@ socket.on('message', (msg) => {
       <pre><code>
 const ExpensiveComponent = React.memo(({ data }) => {
   return (
-    <div>
+    &lt;div&gt;
       {data.map(item => (
-        <div key={item.id}>{item.name}</div>
+        &lt;div key={item.id}&gt;{item.name}&lt;/div&gt;
       ))}
-    </div>
+    &lt;/div&gt;
   );
 });
       </code></pre>
@@ -1480,11 +1479,11 @@ function ParentComponent() {
   }, []);
   
   return (
-    <div>
-      <p>Count: {count}</p>
-      <p>Expensive Value: {expensiveValue}</p>
-      <button onClick={handleClick}>Increment</button>
-    </div>
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;p&gt;Expensive Value: {expensiveValue}&lt;/p&gt;
+      &lt;button onClick={handleClick}&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
       </code></pre>
@@ -1497,9 +1496,9 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <HeavyComponent />
-    </Suspense>
+    &lt;Suspense fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;
+      &lt;HeavyComponent /&gt;
+    &lt;/Suspense&gt;
   );
 }
       </code></pre>
@@ -1522,7 +1521,7 @@ function App() {
       
       <h2>Conditional Types</h2>
       <pre><code>
-type NonNullable<T> = T extends null | undefined ? never : T;
+type NonNullable&lt;T&gt; = T extends null | undefined ? never : T;
 
 type StringOrNumber = string | number;
 type StringOnly = StringOrNumber extends string ? StringOrNumber : never;
@@ -1530,15 +1529,15 @@ type StringOnly = StringOrNumber extends string ? StringOrNumber : never;
       
       <h2>Mapped Types</h2>
       <pre><code>
-type Readonly<T> = {
+type Readonly&lt;T&gt; = {
   readonly [P in keyof T]: T[P];
 };
 
-type Partial<T> = {
+type Partial&lt;T&gt; = {
   [P in keyof T]?: T[P];
 };
 
-type Pick<T, K extends keyof T> = {
+type Pick&lt;T, K extends keyof T&gt; = {
   [P in K]: T[P];
 };
       </code></pre>
@@ -1610,10 +1609,10 @@ export async function getServerSideProps(context) {
 
 function Page({ data }) {
   return (
-    <div>
-      <h1>Server-Side Rendered Page</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    &lt;div&gt;
+      &lt;h1&gt;Server-Side Rendered Page&lt;/h1&gt;
+      &lt;pre&gt;{JSON.stringify(data, null, 2)}&lt;/pre&gt;
+    &lt;/div&gt;
   );
 }
       </code></pre>
@@ -1795,10 +1794,10 @@ function BearCounter() {
   const increase = useBearStore((state) => state.increase);
   
   return (
-    <div>
-      <h1>{bears} bears around here</h1>
-      <button onClick={() => increase(1)}>Add a bear</button>
-    </div>
+    &lt;div&gt;
+      &lt;h1&gt;{bears} bears around here&lt;/h1&gt;
+      &lt;button onClick={() => increase(1)}&gt;Add a bear&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
       </code></pre>

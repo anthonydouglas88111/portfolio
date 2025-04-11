@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiArrowLeft } from "react-icons/fi";
+import { ArrowLeftIcon } from "lucide-react";
 
 import PageTransitionAnimation from "@/components/page-transition-animation";
 
@@ -56,7 +56,7 @@ export default function PageNotFound() {
               href="/"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-all hover:bg-accent/90"
             >
-              <FiArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              <ArrowLeftIcon className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               Back to Home
             </Link>
           </motion.div>

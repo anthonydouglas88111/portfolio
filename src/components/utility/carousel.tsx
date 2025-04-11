@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, AnimationProps, motion, wrap } from "framer-motion";
-import { BiSolidLeftArrow } from "react-icons/bi";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 import { classNames } from "@/utility/classNames";
 
@@ -79,11 +79,8 @@ export default function Carousel({ aspectRatio = 1, images }: CarouselProps) {
         ></motion.img>
       </AnimatePresence>
       <div className="absolute bottom-0 flex h-12 w-full items-center justify-center gap-2">
-        <button
-          onClick={() => paginate(1)}
-          className="hidden h-4 w-4 lg:inline-block"
-        >
-          <BiSolidLeftArrow className="fill-zinc-700 dark:fill-zinc-400" />
+        <button onClick={() => paginate(-1)} className="hidden lg:inline-block">
+          <ChevronLeftIcon className="text-zinc-700 dark:text-zinc-400" />
         </button>
         {images.map((_, index) => (
           <span
@@ -96,11 +93,8 @@ export default function Carousel({ aspectRatio = 1, images }: CarouselProps) {
             )}
           ></span>
         ))}
-        <button
-          onClick={() => paginate(-1)}
-          className="hidden h-4 w-4 lg:inline-block"
-        >
-          <BiSolidLeftArrow className="rotate-180 fill-zinc-700 dark:fill-zinc-400" />
+        <button onClick={() => paginate(1)} className="hidden lg:inline-block">
+          <ChevronRightIcon className="text-zinc-700 dark:text-zinc-400" />
         </button>
       </div>
     </div>

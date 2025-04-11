@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiDownload, FiGithub, FiUser } from "react-icons/fi";
+import { DownloadIcon, GithubIcon, UserIcon } from "lucide-react";
 
 import FadeUp from "@/animation/fade-up";
 import { metadata } from "@/data/metadata.mjs";
@@ -100,7 +100,7 @@ export default function LandingHero() {
                   target="_blank"
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-semibold text-white transition-all hover:scale-105 hover:bg-accent/90"
                 >
-                  <FiDownload className="h-5 w-5" />
+                  <DownloadIcon className="h-5 w-5" />
                   Download Resume
                 </Link>
                 <Link
@@ -109,14 +109,14 @@ export default function LandingHero() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-accent/20 bg-white/5 px-6 py-3 text-base font-semibold text-accent transition-all hover:scale-105 hover:bg-accent/10 dark:border-accent/20 dark:bg-zinc-900/50"
                 >
-                  <FiGithub className="h-5 w-5" />
+                  <GithubIcon className="h-5 w-5" />
                   GitHub
                 </Link>
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 rounded-lg border border-accent/20 bg-white/5 px-6 py-3 text-base font-semibold text-accent transition-all hover:scale-105 hover:bg-accent/10 dark:border-accent/20 dark:bg-zinc-900/50"
                 >
-                  <FiUser className="h-5 w-5" />
+                  <UserIcon className="h-5 w-5" />
                   About Me
                 </Link>
               </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
+import { ExternalLinkIcon } from "lucide-react";
 
 import Carousel from "@/components/utility/carousel";
 import { GithubIcon } from "@/components/icons";
@@ -73,7 +73,7 @@ export default function ProjectCard(props: ProjectCardProps) {
                   target="_blank"
                   className="flex items-center gap-1 text-xs underline md:text-sm"
                 >
-                  <FiExternalLink className="h-5 w-5" /> Live
+                  <ExternalLinkIcon className="h-5 w-5" /> Live
                 </Link>
               )}
             </div>

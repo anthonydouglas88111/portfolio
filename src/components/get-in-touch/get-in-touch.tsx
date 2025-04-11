@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { FormikProps } from "formik";
 
-import { MailIcon, PhoneIcon, LocationIcon } from "@/components/icons";
 import ContactForm, {
   type ContactFormValues,
 } from "@/components/contact-form/contact-form";
@@ -126,7 +126,7 @@ export default function GetInTouch() {
               className="flex items-center gap-4"
             >
               <div className="rounded-full bg-white/90 p-3 backdrop-blur-sm">
-                <LocationIcon className="h-5 w-5 text-accent/90" />
+                <MapPinIcon className="h-5 w-5 text-accent/90" />
               </div>
               <span className="text-lg text-white/90">
                 {metadata.city}, {metadata.provinceCode}, {metadata.country}
