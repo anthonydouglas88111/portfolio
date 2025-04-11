@@ -13,13 +13,13 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title={`About ${metadata.name} | Software Engineer`}
-        description={`Learn more about ${metadata.name}, a dedicated Software Engineer with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions.`}
+        title={`About ${metadata.name} | ${metadata.jobTitle}`}
+        description={`Learn more about ${metadata.name}, a dedicated ${metadata.jobTitle} with over 10 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions.`}
         canonical={`${metadata.portfolioUrl}/about`}
         openGraph={{
           url: `${metadata.portfolioUrl}/about`,
-          title: `Learn About ${metadata.name} | Software Engineer`,
-          description: `Dive into the story of ${metadata.name}, a Software Engineer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.`,
+          title: `Learn About ${metadata.name} | ${metadata.jobTitle}`,
+          description: `Dive into the story of ${metadata.name}, a dedicated ${metadata.jobTitle}. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.`,
           images: [
             {
               url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
@@ -36,7 +36,7 @@ export default function About() {
           {
             property: "keywords",
             content:
-              "Software Engineer portfolio, Software Engineer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
+              "Portfolio, Software Engineer, Full Stack Developer, Frontend Developer, Backend Developer, Web Developer, React.js, Next.js, Vue.js, JavaScript, HTML, CSS, UI/UX, Responsive Design, Frontend Development, Backend Development, Web Development, Professional Journey, Skills, Passion for Web Development",
           },
         ]}
       />

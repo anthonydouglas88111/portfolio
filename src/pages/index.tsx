@@ -16,13 +16,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title={`${metadata.name} | Software Engineer`}
-        description={`Explore the professional portfolio of ${metadata.name}, a skilled Software Engineer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences.`}
+        title={`${metadata.name} | ${metadata.jobTitle}`}
+        description={`Explore the professional portfolio of ${metadata.name}, a skilled ${metadata.jobTitle} with over 10 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences.`}
         canonical={metadata.portfolioUrl}
         openGraph={{
           url: metadata.portfolioUrl,
-          title: `${metadata.name} | Software Engineer`,
-          description: `Dive into the world of web development with ${metadata.name}. Discover a Software Engineer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
+          title: `${metadata.name} | ${metadata.jobTitle}`,
+          description: `Dive into the world of web development with ${metadata.name}. Discover a ${metadata.jobTitle} with over 10 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.`,
           images: [
             {
               url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
@@ -39,7 +39,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "React Developer, Software Engineer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              "Portfolio, Software Engineer, Full Stack Developer, Frontend Developer, Backend Developer, Web Developer, React.js, Next.js, Vue.js, JavaScript, HTML, CSS, UI/UX, Responsive Design, Frontend Development, Backend Development, Web Development",
           },
         ]}
       />

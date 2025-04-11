@@ -40,12 +40,12 @@ export default function Blogs() {
   return (
     <>
       <NextSeo
-        title={`Blogs by ${metadata.name} | Software Engineer`}
+        title={`Blogs by ${metadata.name} | ${metadata.jobTitle}`}
         description={`Read insights, tutorials, and thoughts on software development, web technologies, and engineering best practices from ${metadata.name}.`}
         canonical={`${metadata.portfolioUrl}/blogs`}
         openGraph={{
           url: `${metadata.portfolioUrl}/blogs`,
-          title: `Blogs by ${metadata.name} - Software Engineer`,
+          title: `Blogs by ${metadata.name} - ${metadata.jobTitle}`,
           description:
             "Explore articles and insights about software development, web technologies, and engineering best practices.",
           images: [
@@ -64,7 +64,7 @@ export default function Blogs() {
           {
             property: "keywords",
             content:
-              "Blogs, Software Engineering, Web Development, React, JavaScript, Frontend Development, Technical Writing, Programming Tips, Development Tutorials",
+              "Blogs, Portfolio, Software Engineer, Full Stack Developer, Frontend Developer, Backend Developer, Web Developer, React.js, Next.js, Vue.js, JavaScript, HTML, CSS, UI/UX, Responsive Design, Frontend Development, Backend Development, Web Development, Technical Writing, Programming Tips, Development Tutorials",
           },
         ]}
       />

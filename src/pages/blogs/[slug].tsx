@@ -175,7 +175,7 @@ export default function BlogPost() {
                   About the Author
                 </h2>
                 <p className="mt-4 text-muted-foreground">
-                  {metadata.name} is a Software Engineer passionate about
+                  {metadata.name} is a {metadata.jobTitle} passionate about
                   building scalable web applications and sharing knowledge with
                   the developer community.
                 </p>

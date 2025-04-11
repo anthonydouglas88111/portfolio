@@ -21,13 +21,13 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title={`Projects by ${metadata.name} - Software Engineer Portfolio`}
-        description={`Explore a collection of projects by ${metadata.name}, a seasoned Software Engineer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work.`}
+        title={`Projects by ${metadata.name} | ${metadata.jobTitle}`}
+        description={`Explore a collection of projects by ${metadata.name}, a seasoned ${metadata.jobTitle}. From innovative web applications to responsive interfaces, discover the depth and diversity of my work.`}
         canonical={`${metadata.portfolioUrl}/projects`}
         openGraph={{
           url: `${metadata.portfolioUrl}/projects`,
-          title: `Discover Projects by ${metadata.name} - Software Engineer`,
-          description: `Explore a showcase of projects crafted by ${metadata.name}, a Software Engineer. Witness the fusion of creativity and technology in web development.`,
+          title: `Discover Projects by ${metadata.name} | ${metadata.jobTitle}`,
+          description: `Explore a showcase of projects crafted by ${metadata.name}, a ${metadata.jobTitle}. Witness the fusion of creativity and technology in web development.`,
           images: [
             {
               url: `${metadata.portfolioUrl}${metadata.portfolioImage}`,
@@ -44,7 +44,7 @@ export default function Projects() {
           {
             property: "keywords",
             content:
-              "Projects,Amit Portfolio, Software Engineer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
+              "Projects, Portfolio, Software Engineer, Full Stack Developer, Frontend Developer, Backend Developer, Web Developer, React.js, Next.js, Vue.js, JavaScript, HTML, CSS, UI/UX, Responsive Design, Frontend Development, Backend Development, Web Development",
           },
         ]}
       />
