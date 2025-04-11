@@ -10,7 +10,7 @@ import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {
   return (
-    <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-16 text-center sm:px-14 md:px-20 md:py-24 lg:flex-row lg:gap-12 lg:py-32 lg:text-left">
+    <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 py-16 text-left sm:px-14 md:px-20 md:py-24 lg:flex-row lg:gap-14 lg:py-32">
       <div className="absolute right-12 top-12 -z-10 hidden lg:block">
         <motion.div
           initial={{ opacity: 0 }}
@@ -62,7 +62,7 @@ export default function AboutHero() {
       <FadeRight
         key="hero-image"
         duration={0.6}
-        className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2"
+        className="w-full sm:w-2/3 md:w-2/3 lg:w-1/2"
       >
         <div className="relative">
           <motion.div
@@ -107,15 +107,15 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="absolute -bottom-6 -right-6 rounded-full bg-background p-2 shadow-lg sm:-bottom-8 sm:-right-8 sm:p-3"
+            className="absolute -bottom-10 -right-10 rounded-full bg-background p-2 shadow-lg sm:-bottom-12 sm:-right-12 sm:p-3"
           >
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 sm:h-20 sm:w-20"
+              className="flex h-20 w-20 items-center justify-center rounded-full bg-accent/10 sm:h-24 sm:w-24"
             >
               <span className="text-xs font-bold text-accent sm:text-sm">
-                ENGINEER
+                FULL STACK
               </span>
             </motion.div>
           </motion.div>
@@ -125,7 +125,7 @@ export default function AboutHero() {
       <div className="mt-16 w-full lg:mt-0 lg:w-1/2">
         <FadeUp key="hero-content" duration={0.6}>
           <div className="relative">
-            <h1 className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text py-1.5 text-5xl font-bold text-transparent sm:text-6xl md:text-6xl lg:text-5xl xl:text-7xl">
+            <h1 className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text py-1.5 text-3xl font-bold text-transparent sm:text-4xl md:text-4xl lg:text-3xl xl:text-5xl">
               {metadata.name}
             </h1>
             <motion.div
@@ -140,7 +140,7 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-8 text-lg font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-xl md:text-xl"
+            className="text-md mt-4 font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg lg:mt-8"
           >
             I turn vision into reality with code. Whether I&apos;m working on a
             website or any digital product, I bring my commitment to design
@@ -151,7 +151,7 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-6 text-lg font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-xl md:text-xl"
+            className="text-md mt-4 font-medium leading-relaxed text-zinc-900 dark:text-zinc-300 sm:text-lg lg:mt-8"
           >
             Explore my latest{" "}
             <Link href="/projects" className="group relative inline-block">
@@ -160,8 +160,8 @@ export default function AboutHero() {
               </span>
               <span className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 transform bg-accent transition-transform duration-300 group-hover:scale-x-100" />
             </Link>{" "}
-            showcasing my expertise in Reactjs, Nextjs, Javascript, Typescript
-            and web development.
+            showcasing my expertise in React.js, Next.js, Vue.js, Javascript and
+            web development.
           </motion.p>
 
           <motion.div
@@ -170,7 +170,7 @@ export default function AboutHero() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="mt-8 flex flex-wrap gap-2"
           >
-            {["React", "Next.js", "TypeScript", "UI/UX", "Tailwind"].map(
+            {["React.js", "Next.js", "Vue.js", "Javascript", "HTML", "CSS"].map(
               (skill, index) => (
                 <motion.span
                   key={skill}
